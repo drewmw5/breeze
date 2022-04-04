@@ -30,7 +30,7 @@
         },
         "laravel": {
             "providers": [
-                "Drewmw5\\Breeze\\BreezeTSServiceProvider"
+                "Laravel\\Breeze\\BreezeServiceProvider"
             ]
         }
     },
