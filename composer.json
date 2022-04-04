@@ -1,16 +1,16 @@
 {
-    "name": "laravel/breeze",
+    "name": "drewmw5/breeze",
     "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
     "keywords": ["laravel", "auth"],
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/laravel/breeze/issues",
-        "source": "https://github.com/laravel/breeze"
+        "issues": "https://github.com/drewmw5/breeze/issues",
+        "source": "https://github.com/drewmw5/breeze"
     },
     "authors": [
         {
-            "name": "Taylor Otwell",
-            "email": "taylor@laravel.com"
+            "name": "Drew Williams",
+            "email": "drewmwilliams55@gmail.com"
         }
     ],
     "require": {
