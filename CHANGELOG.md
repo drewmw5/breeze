@@ -1,6 +1,10 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/breeze/compare/v2.1.2...master)
+## [Unreleased](https://github.com/laravel/breeze/compare/v2.1.3...master)
+
+## [v2.1.3](https://github.com/laravel/breeze/compare/v2.1.2...v2.1.3) - 2022-04-04
+
+**Full Changelog**: https://github.com/drewmw5/breeze/compare/v2.1.2...v2.1.3
 
 ## [v2.1.2](https://github.com/laravel/breeze/compare/v2.1.1...v2.1.2) - 2022-04-04
 
