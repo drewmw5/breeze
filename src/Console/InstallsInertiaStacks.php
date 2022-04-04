@@ -1,6 +1,6 @@
 <?php
 
-namespace Drewmw5\Breeze\Console;
+namespace Laravel\Breeze\Console;
 
 use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Process\Process;
@@ -263,7 +263,7 @@ trait InstallsInertiaStacks
         copy(__DIR__.'/../../stubs/inertia-common/webpack.mix.js', base_path('webpack.mix.js'));
         copy(__DIR__.'/../../stubs/inertia-common/jsconfig.json', base_path('jsconfig.json'));
         copy(__DIR__.'/../../stubs/inertia-common/resources/css/app.css', resource_path('css/app.css'));
-        copy(__DIR__.'/../../stubs/inertia-react-ts/resources/js/app.js', resource_path('js/app.js'));
+        copy(__DIR__.'/../../stubs/inertia-react-ts/resources/ts/app.tsx', resource_path('js/app.js'));
 
         $this->replaceInFile('.vue()', '.react()', base_path('webpack.mix.js'));
         $this->replaceInFile('.vue', '.js', base_path('tailwind.config.js'));
