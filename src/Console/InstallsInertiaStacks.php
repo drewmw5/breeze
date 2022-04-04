@@ -268,7 +268,7 @@ trait InstallsInertiaStacks
         copy(__DIR__.'/../../stubs/inertia-react-ts/resources/ts/app.tsx', resource_path('js/app.js'));
 
         $this->replaceInFile('.vue()', '.react()', base_path('webpack.mix.js'));
-        $this->replaceInFile('.vue', '.js', base_path('tailwind.config.js'));
+        $this->replaceInFile('.vue', '.ts', base_path('tailwind.config.js'));
 
         if ($this->option('ssr')) {
             $this->installInertiaReactSsrStack();
