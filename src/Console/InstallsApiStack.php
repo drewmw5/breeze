@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Breeze\Console;
+namespace Drewmw5\Breeze\Console;
 
 use Illuminate\Filesystem\Filesystem;
 
