@@ -47,6 +47,7 @@ export default function ResetPassword({ token, email }: Props) {
                     <Input
                         type="email"
                         name="email"
+                        id="email"
                         value={data.email}
                         className="block w-full mt-1"
                         autoComplete="username"
@@ -60,6 +61,7 @@ export default function ResetPassword({ token, email }: Props) {
                     <Input
                         type="password"
                         name="password"
+                        id="password"
                         value={data.password}
                         className="block w-full mt-1"
                         autoComplete="new-password"
@@ -74,6 +76,7 @@ export default function ResetPassword({ token, email }: Props) {
                     <Input
                         type="password"
                         name="password_confirmation"
+                        id="password_confirmation"
                         value={data.password_confirmation}
                         className="block w-full mt-1"
                         autoComplete="new-password"
