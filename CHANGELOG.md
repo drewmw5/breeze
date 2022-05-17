@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ## [Unreleased](https://github.com/laravel/breeze/compare/v1.6.1...1.x)
 
@@ -16,32 +17,15 @@
 ## [Unreleased](https://github.com/laravel/breeze/compare/v1.14.0...master)
 
 ## [v1.14.0](https://github.com/laravel/breeze/compare/v1.6.0...v1.14.0) - 2022-09-21
+=======
+## [Unreleased](https://github.com/laravel/breeze/compare/v1.9.1...1.x)
+>>>>>>> 71f0210 (Update CHANGELOG)
 
-## [v2.2.0](https://github.com/laravel/breeze/compare/v2.1.6...v2.2.0) - 2022-04-04
+## [v1.9.1](https://github.com/laravel/breeze/compare/v1.9.0...v1.9.1) - 2022-05-11
 
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v2.1.6...v2.2.0
+### Changed
 
-## [v2.1.6](https://github.com/laravel/breeze/compare/v2.1.5...v2.1.6) - 2022-04-04
-
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v2.1.5...v2.1.6
-
-## [v2.1.5](https://github.com/laravel/breeze/compare/v2.1.4...v2.1.5) - 2022-04-04
-
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v2.1.4...v2.1.5
-
-## [v2.1.4](https://github.com/laravel/breeze/compare/v2.1.3...v2.1.4) - 2022-04-04
-
-## [v2.1.3](https://github.com/laravel/breeze/compare/v2.1.2...v2.1.3) - 2022-04-04
-
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v2.1.2...v2.1.3
-
-## [v2.1.2](https://github.com/laravel/breeze/compare/v2.1.1...v2.1.2) - 2022-04-04
-
-## [v2.1.1](https://github.com/laravel/breeze/compare/v2.1.0...v2.1.1) - 2022-04-04
-
-## [v2.1.0](https://github.com/laravel/breeze/compare/v2.0.0...v2.1.0) - 2022-04-04
-
-## [v2.0.0](https://github.com/laravel/breeze/compare/v1.9.0...v2.0.0) - 2022-04-03
+- Update command comments by @taylorotwell in https://github.com/laravel/breeze/commit/cde98d03954bfcad0c9370c825187b8a579d94e1
 
 =======
 
