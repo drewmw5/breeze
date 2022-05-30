@@ -12,22 +12,7 @@ require('mix-tailwindcss');
  |
  */
 
-mix.ts('resources/js/app.js', 'public/js/app.js')
-    .copyDirectory('resources/includes', 'public')
-    .browserSync({
-        proxy: 'https://site',
-        host: 'localhost',
-        notify: false,
-        https: {
-            cert: "./dockerfiles/localhost/fullchain.pem",
-            key: "./dockerfiles/localhost/privkey.pem"
-        }
-    })
-    .sass('resources/css/app.scss', 'public/css')
-    .tailwind()
-    .react()
-
-
-if (mix.inProduction()) {
-    mix.version();
-}
+mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
+    require('tailwindcss'),
+    require('autoprefixer'),
+]);
