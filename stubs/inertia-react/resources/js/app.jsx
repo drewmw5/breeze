@@ -1,5 +1,8 @@
 import './bootstrap';
+<<<<<<< HEAD
 import '../css/app.css';
+=======
+>>>>>>> 32340f1 ([1.x] Improve Vite compatibility (#154))
 
 import React from 'react';
 import { render } from 'react-dom';
