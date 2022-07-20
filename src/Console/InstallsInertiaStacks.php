@@ -81,8 +81,8 @@ trait InstallsInertiaStacks
             $this->installInertiaVueSsrStack();
         }
 
-        $this->info('Breeze scaffolding installed successfully.');
-        $this->comment('Please execute the "npm install" && "npm run dev" commands to build your assets.');
+        $this->components->info('Breeze scaffolding installed successfully.');
+        $this->components->warn('Please execute the [npm install && npm run dev] commands to build your assets.');
     }
 
     /**
@@ -193,8 +193,8 @@ trait InstallsInertiaStacks
             $this->installInertiaReactSsrStack();
         }
 
-        $this->info('Breeze scaffolding installed successfully.');
-        $this->comment('Please execute the "npm install" && "npm run dev" commands to build your assets.');
+        $this->components->info('Breeze scaffolding installed successfully.');
+        $this->components->warn('Please execute the [npm install && npm run dev] commands to build your assets.');
     }
 
     protected function installInertiaReactTSStack()
