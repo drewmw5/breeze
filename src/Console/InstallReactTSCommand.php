@@ -50,7 +50,7 @@ class InstallReactTSCommand extends Command
             return $this->installBladeStack();
         }
 
-        $this->components->error('Invalid stack. Supported stacks are [blade], [react], [vue], and [apis].');
+        $this->components->error('Invalid stack. Supported stacks are [blade], [react], [vue], and [api].');
 
         return 1;
     }
