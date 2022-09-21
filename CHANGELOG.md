@@ -1,7 +1,10 @@
 # Release Notes
 
 <<<<<<< HEAD
-## [Unreleased](https://github.com/laravel/breeze/compare/v1.6.0...master)
+
+## [Unreleased](https://github.com/laravel/breeze/compare/v1.14.0...master)
+
+## [v1.14.0](https://github.com/laravel/breeze/compare/v1.6.0...v1.14.0) - 2022-09-21
 
 ## [v2.2.0](https://github.com/laravel/breeze/compare/v2.1.6...v2.2.0) - 2022-04-04
 
@@ -28,7 +31,9 @@
 ## [v2.1.0](https://github.com/laravel/breeze/compare/v2.0.0...v2.1.0) - 2022-04-04
 
 ## [v2.0.0](https://github.com/laravel/breeze/compare/v1.9.0...v2.0.0) - 2022-04-03
+
 =======
+
 ## [Unreleased](https://github.com/laravel/breeze/compare/v1.13.1...1.x)
 
 ## [v1.13.1](https://github.com/laravel/breeze/compare/v1.13.0...v1.13.1) - 2022-09-20
@@ -132,7 +137,8 @@
 ### Changed
 
 - Update command comments by @taylorotwell in https://github.com/laravel/breeze/commit/cde98d03954bfcad0c9370c825187b8a579d94e1
->>>>>>> origin/1.x
+
+> > > > > > > origin/1.x
 
 ## [v1.9.0](https://github.com/laravel/breeze/compare/v1.8.2...v1.9.0) - 2022-03-26
 
