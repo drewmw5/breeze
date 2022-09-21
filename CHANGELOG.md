@@ -1,5 +1,6 @@
 # Release Notes
 
+<<<<<<< HEAD
 ## [Unreleased](https://github.com/laravel/breeze/compare/v1.6.0...master)
 
 ## [v2.2.0](https://github.com/laravel/breeze/compare/v2.1.6...v2.2.0) - 2022-04-04
@@ -27,6 +28,111 @@
 ## [v2.1.0](https://github.com/laravel/breeze/compare/v2.0.0...v2.1.0) - 2022-04-04
 
 ## [v2.0.0](https://github.com/laravel/breeze/compare/v1.9.0...v2.0.0) - 2022-04-03
+=======
+## [Unreleased](https://github.com/laravel/breeze/compare/v1.13.1...1.x)
+
+## [v1.13.1](https://github.com/laravel/breeze/compare/v1.13.0...v1.13.1) - 2022-09-20
+
+### Fixed
+
+- Make app directory consistently lowercase by @jessarcher in https://github.com/laravel/breeze/pull/187
+
+## [v1.13.0](https://github.com/laravel/breeze/compare/v1.12.0...v1.13.0) - 2022-09-06
+
+### Changed
+
+- Remove "Breeze" component prefix by @jessarcher in https://github.com/laravel/breeze/pull/179
+
+## [v1.12.0](https://github.com/laravel/breeze/compare/v1.11.4...v1.12.0) - 2022-08-16
+
+### Changed
+
+- Install NPM dependencies and build assets by @jessarcher in https://github.com/laravel/breeze/pull/180
+- Set application home URI to /dashboard by @nikolaynikolaevn in https://github.com/laravel/breeze/pull/181
+- Update inertia-laravel by @timacdonald in https://github.com/laravel/breeze/commit/6d95e9aacbe992e19c81d5cd6f7eec994e50dd8d
+
+## [v1.11.4](https://github.com/laravel/breeze/compare/v1.11.3...v1.11.4) - 2022-08-08
+
+### Changed
+
+- Display validation errors alongside their field by @jessarcher in https://github.com/laravel/breeze/pull/175
+- Validate the stack argument by @jessarcher in https://github.com/laravel/breeze/pull/178
+- Style improvements by @jessarcher in https://github.com/laravel/breeze/pull/177
+
+## [v1.11.3](https://github.com/laravel/breeze/compare/v1.11.2...v1.11.3) - 2022-08-01
+
+### Changed
+
+- Transliterate throttle key by @JurianArie in https://github.com/laravel/breeze/pull/173
+- Switch to fonts.bunny.net instead of Google Fonts by @lucasRolff in https://github.com/laravel/breeze/pull/174
+
+## [v1.11.2](https://github.com/laravel/breeze/compare/v1.11.1...v1.11.2) - 2022-07-20
+
+### Changed
+
+- Improved console output by @nunomaduro in https://github.com/laravel/breeze/pull/172
+
+## [v1.11.1](https://github.com/laravel/breeze/compare/v1.11.0...v1.11.1) - 2022-07-20
+
+### Changed
+
+- Vite 3 support by @timacdonald in https://github.com/laravel/breeze/pull/171
+
+## [v1.11.0](https://github.com/laravel/breeze/compare/v1.10.0...v1.11.0) - 2022-07-11
+
+### Changed
+
+- Add default view / routes reloading to breeze stacks by @timacdonald in https://github.com/laravel/breeze/pull/166
+- Update SSR directory by @jessarcher in https://github.com/laravel/breeze/pull/168
+
+### Fixed
+
+- Fix: React SSR installation error by @renomureza in https://github.com/laravel/breeze/pull/169
+
+### Removed
+
+- Laravel 8 don't support the vite. by @Jehong-Ahn in https://github.com/laravel/breeze/pull/167
+
+## [v1.10.0](https://github.com/laravel/breeze/compare/v1.9.4...v1.10.0) - 2022-06-28
+
+### Added
+
+- Vite by @jessarcher in https://github.com/laravel/breeze/pull/158
+
+### Fixed
+
+- fix TailwindCSS first party TypeScript types weren't working right by @geisi in https://github.com/laravel/breeze/pull/160
+- Bump `@tailwindcss/forms` fix console warning with Vite by @timacdonald in https://github.com/laravel/breeze/pull/161
+- Fix ziggy determing current URL when using SSR by @timacdonald in https://github.com/laravel/breeze/pull/163
+
+## [v1.9.4](https://github.com/laravel/breeze/compare/v1.9.3...v1.9.4) - 2022-06-13
+
+### Changed
+
+- Bump TailwindCSS to 3.1 by @geisi in https://github.com/laravel/breeze/pull/156
+
+## [v1.9.3](https://github.com/laravel/breeze/compare/v1.9.2...v1.9.3) - 2022-06-01
+
+### Changed
+
+- Improve Vite compatibility by @jessarcher in https://github.com/laravel/breeze/pull/154
+
+## [v1.9.2](https://github.com/laravel/breeze/compare/v1.9.1...v1.9.2) - 2022-05-30
+
+### Changed
+
+- Simplify Tailwind installation by @jessarcher in https://github.com/laravel/breeze/pull/155
+
+### Fixed
+
+- Fix inability to click dropdown content in React version by @jessarcher in https://github.com/laravel/breeze/pull/153
+
+## [v1.9.1](https://github.com/laravel/breeze/compare/v1.9.0...v1.9.1) - 2022-05-11
+
+### Changed
+
+- Update command comments by @taylorotwell in https://github.com/laravel/breeze/commit/cde98d03954bfcad0c9370c825187b8a579d94e1
+>>>>>>> origin/1.x
 
 ## [v1.9.0](https://github.com/laravel/breeze/compare/v1.8.2...v1.9.0) - 2022-03-26
 
