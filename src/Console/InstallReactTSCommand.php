@@ -9,9 +9,9 @@ use RuntimeException;
 use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Process\Process;
 
-class InstallCommand extends Command
+class InstallReactTSCommand extends Command
 {
-    use InstallsApiStack, InstallsBladeStack, InstallsInertiaStacks;
+    use InstallsApiStack, InstallsBladeStack, InstallsInertiaStacks, InstallsReactTSStack;
 
     /**
      * The name and signature of the console command.
@@ -50,7 +50,7 @@ class InstallCommand extends Command
             return $this->installBladeStack();
         }
 
-        $this->components->error('Invalid stack. Supported stacks are [blade], [react], [vue], and [api].');
+        $this->components->error('Invalid stack. Supported stacks are [blade], [react], [vue], and [apis].');
 
         return 1;
     }
