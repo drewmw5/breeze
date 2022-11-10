@@ -5,7 +5,7 @@ namespace Laravel\Breeze;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
-class BreezeServiceProvider extends ServiceProvider implements DeferrableProvider
+class ReactTSServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
      * Register any application services.
