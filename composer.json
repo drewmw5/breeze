@@ -14,6 +14,7 @@
         }
     ],
     "require": {
+        "laravel/breeze": "^1.14.3",
         "php": "^8.0.2",
         "illuminate/console": "^9.21",
         "illuminate/filesystem": "^9.21",
@@ -35,7 +36,7 @@
         },
         "laravel": {
             "providers": [
-                "Laravel\\Breeze\\BreezeServiceProvider"
+                "Drewmw5\\Breeze\\ReactTSServiceProvider"
             ]
         }
     },
