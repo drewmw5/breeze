@@ -55,7 +55,7 @@ trait InstallsReactTSStack
 
         // Views...
         copy(__DIR__.'/../../stubs/inertia-common/resources/views/app.blade.php', resource_path('views/app.blade.php'));
-        $this->replaceInFile("@vite('resources/js/app.js')", '@viteReactRefresh'.PHP_EOL."        @vite('resources/js/app.jsx')", resource_path('views/app.blade.php'));
+        $this->replaceInFile("@vite('resources/js/app.js')", '@viteReactRefresh'.PHP_EOL."        @vite('resources/js/app.tsx')", resource_path('views/app.blade.php'));
 
         // Components + Pages...
         (new Filesystem)->ensureDirectoryExists(resource_path('js/Components'));
@@ -83,8 +83,8 @@ trait InstallsReactTSStack
         copy(__DIR__.'/../../stubs/default/postcss.config.js', base_path('postcss.config.js'));
         copy(__DIR__.'/../../stubs/inertia-common/tailwind.config.js', base_path('tailwind.config.js'));
         copy(__DIR__.'/../../stubs/inertia-common/jsconfig.json', base_path('jsconfig.json'));
-        copy(__DIR__.'/../../stubs/inertia-react/vite.config.js', base_path('vite.config.js'));
-        copy(__DIR__.'/../../stubs/inertia-react-ts/resources/ts/bootstrap.js', resource_path('js/bootstrap.js'));
+        copy(__DIR__.'/../../stubs/inertia-react-ts/vite.config.js', base_path('vite.config.js'));
+        copy(__DIR__.'/../../stubs/inertia-react-ts/tsconfig.json', base_path('tsconfig.json'));
         copy(__DIR__.'/../../stubs/inertia-react-ts/resources/ts/app.tsx', resource_path('js/app.tsx'));
 
         if (file_exists(resource_path('js/app.js'))) {
