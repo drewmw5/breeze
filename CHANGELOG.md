@@ -8,7 +8,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-## [Unreleased](https://github.com/laravel/breeze/compare/v3.6.1...master)
+## [Unreleased](https://github.com/laravel/breeze/compare/v3.6.2...master)
+
+## [v3.6.2](https://github.com/laravel/breeze/compare/v3.6.1...v3.6.2) - 2022-11-24
+
+**Full Changelog**: https://github.com/drewmw5/breeze/compare/v3.6.1...v3.6.2
 
 ## [v3.6.1](https://github.com/laravel/breeze/compare/v3.6.0...v3.6.1) - 2022-11-24
 
