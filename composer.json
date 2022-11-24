@@ -26,8 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Laravel\\Breeze\\": "src/",
-            "drewmw5\\Breeze\\": "src/"
+            "Drewmw5\\Breeze\\": "src/"
         }
     },
     "extra": {
@@ -37,6 +36,9 @@
         "laravel": {
             "providers": [
                 "Drewmw5\\Breeze\\ReactTSServiceProvider"
+            ],
+            "dont-discover":[
+                "laravel/breeze"
             ]
         }
     },
