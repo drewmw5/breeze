@@ -83,7 +83,7 @@ trait InstallsReactTSStack
         copy(__DIR__.'/../../stubs/default/postcss.config.js', base_path('postcss.config.js'));
         copy(__DIR__.'/../../stubs/inertia-common/tailwind.config.js', base_path('tailwind.config.js'));
         copy(__DIR__.'/../../stubs/inertia-common/jsconfig.json', base_path('jsconfig.json'));
-        copy(__DIR__.'/../../stubs/inertia-react-ts/vite.config.js', base_path('vite.config.js'));
+        copy(__DIR__.'/../../stubs/inertia-react-ts/vite.config.ts', base_path('vite.config.ts'));
         copy(__DIR__.'/../../stubs/inertia-react-ts/tsconfig.json', base_path('tsconfig.json'));
         copy(__DIR__.'/../../stubs/inertia-react-ts/resources/ts/app.tsx', resource_path('js/app.tsx'));
 
