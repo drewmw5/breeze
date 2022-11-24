@@ -2,6 +2,9 @@ name: tests
 
 on:
   push:
+    branches:
+      - master
+      - '*.x'
   pull_request:
   schedule:
     - cron: '0 0 * * *'
@@ -13,9 +16,15 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        stack: [blade, react, react --ssr, vue, vue --ssr, api]
+        stack: [blade, react, vue, api]
+        args: [null, --pest]
+        include:
+          - stack: vue
+            args: --ssr
+          - stack: react
+            args: --ssr
 
-    name: Test Stubs (${{ matrix.stack }})
+    name: Test Stubs - ${{ matrix.stack }} ${{ matrix.args }}
 
     steps:
       - name: Setup PHP
@@ -30,18 +39,18 @@ jobs:
       - name: Setup Laravel
         run: |
           composer create-project laravel/laravel:^9 .
-          composer require --dev laravel/breeze:^1
-          rm -rf vendor/laravel/breeze
+          composer require laravel/breeze:* --no-interaction --no-update
+          composer config repositories.breeze '{"type": "path", "url": "breeze"}' --file composer.json
 
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          path: 'vendor/laravel/breeze'
+          path: 'breeze'
 
       - name: Install Breeze
         run: |
-          composer dump
-          php artisan breeze:install ${{ matrix.stack }}
+          composer update "laravel/breeze" --prefer-dist --no-interaction --no-progress -W
+          php artisan breeze:install ${{ matrix.stack }} ${{ matrix.args }}
 
       - name: Install NPM dependencies
         if: matrix.stack != 'api'
@@ -52,7 +61,7 @@ jobs:
         run: npm run build
 
       - name: Execute tests
-        run: vendor/bin/phpunit --verbose
+        run: ${{ matrix.args == '--pest' && 'vendor/bin/pest' || 'vendor/bin/phpunit' }} --verbose
         env:
           DB_CONNECTION: sqlite
           DB_DATABASE: ":memory:"
