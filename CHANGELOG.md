@@ -1,13 +1,18 @@
 # Release Notes
 
 <<<<<<< HEAD
+
 # <<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-## [Unreleased](https://github.com/laravel/breeze/compare/v3.4.0...master)
+## [Unreleased](https://github.com/laravel/breeze/compare/v3.5.0...master)
+
+## [v3.5.0](https://github.com/laravel/breeze/compare/v3.4.0...v3.5.0) - 2022-11-24
+
+**Full Changelog**: https://github.com/drewmw5/breeze/compare/v3.4.0...v3.5.0
 
 ## [v3.4.0](https://github.com/laravel/breeze/compare/v3.3.0...v3.4.0) - 2022-11-24
 
@@ -45,7 +50,9 @@
 =======
 
 ## [Unreleased](https://github.com/laravel/breeze/compare/v1.13.1...1.x)
+
 =======
+
 ## [Unreleased](https://github.com/laravel/breeze/compare/v1.15.2...1.x)
 
 ## [v1.15.2](https://github.com/laravel/breeze/compare/v1.15.1...v1.15.2) - 2022-11-21
@@ -105,7 +112,8 @@
 ### Fixed
 
 - Fixes `HandleInertiaRequests::handle` related types by @felixdorn in https://github.com/laravel/breeze/pull/193
->>>>>>> 1.x
+
+> > > > > > > 1.x
 
 ## [v1.13.1](https://github.com/laravel/breeze/compare/v1.13.0...v1.13.1) - 2022-09-20
 
