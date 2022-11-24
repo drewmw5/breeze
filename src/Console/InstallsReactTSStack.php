@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Breeze\Console;
+namespace Drewmw5\Breeze\Console;
 
 use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Process\Process;
@@ -36,6 +36,7 @@ trait InstallsReactTSStack
                 'react' => '^17.0.2',
                 'react-dom' => '^17.0.2',
                 '@babel/preset-react' => '^7.16.7',
+                'ziggy-js' => '^1.5.0',
             ] + $packages;
         });
 

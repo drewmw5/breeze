@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Breeze\Console;
+namespace Drewmw5\Breeze\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -8,6 +8,10 @@ use Illuminate\Support\Str;
 use RuntimeException;
 use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Process\Process;
+
+use Laravel\Breeze\Console\InstallsApiStack;
+use Laravel\Breeze\Console\InstallsBladeStack;
+use Laravel\Breeze\Console\InstallsInertiaStacks;
 
 class InstallReactTSCommand extends Command
 {

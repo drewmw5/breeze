@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Breeze;
+namespace Drewmw5\Breeze;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
@@ -29,7 +29,7 @@ class ReactTSServiceProvider extends ServiceProvider implements DeferrableProvid
         }
 
         $this->commands([
-            Console\InstallCommand::class,
+            Console\InstallReactTSCommand::class,
         ]);
     }
 
@@ -40,6 +40,6 @@ class ReactTSServiceProvider extends ServiceProvider implements DeferrableProvid
      */
     public function provides()
     {
-        return [Console\InstallCommand::class];
+        return [Console\InstallReactTSCommand::class];
     }
 }
