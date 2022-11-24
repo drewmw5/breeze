@@ -1,11 +1,16 @@
 # Release Notes
 
 # <<<<<<< HEAD
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-## [Unreleased](https://github.com/laravel/breeze/compare/v3.3.0...master)
+## [Unreleased](https://github.com/laravel/breeze/compare/v3.4.0...master)
+
+## [v3.4.0](https://github.com/laravel/breeze/compare/v3.3.0...v3.4.0) - 2022-11-24
+
+**Full Changelog**: https://github.com/drewmw5/breeze/compare/v3.3.0...v3.4.0
 
 ## [v3.3.0](https://github.com/laravel/breeze/compare/v1.6.1...v3.3.0) - 2022-11-23
 
