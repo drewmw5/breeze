@@ -21,21 +21,21 @@ trait InstallsReactTSStack
         // NPM Packages...
         $this->updateNodePackages(function ($packages) {
             return [
-                "@types/react"=> "^17.0.43",
-                "@types/react-dom"=> "^17.0.14",
+                '@babel/preset-react' => '^7.16.7',
                 '@headlessui/react' => '^1.4.2',
                 '@inertiajs/inertia' => '^0.11.0',
                 '@inertiajs/inertia-react' => '^0.8.0',
                 '@inertiajs/progress' => '^0.2.6',
                 '@tailwindcss/forms' => '^0.4.0',
+                "@types/react"=> "^17.0.43",
+                "@types/react-dom"=> "^17.0.14",
                 '@vitejs/plugin-react' => '^2.0.0',
                 'autoprefixer' => '^10.4.2',
                 'postcss' => '^8.4.6',
                 'postcss-import' => '^14.0.2',
-                'tailwindcss' => '^3.0.18',
                 'react' => '^17.0.2',
                 'react-dom' => '^17.0.2',
-                '@babel/preset-react' => '^7.16.7',
+                'tailwindcss' => '^3.0.18',
                 'ziggy-js' => '^1.5.0',
             ] + $packages;
         });
