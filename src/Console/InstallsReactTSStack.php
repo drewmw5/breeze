@@ -16,7 +16,11 @@ trait InstallsReactTSStack
     protected function installInertiaReactTSStack()
     {
         // Install Inertia...
-        $this->requireComposerPackages('inertiajs/inertia-laravel:^0.6.3', 'laravel/sanctum:^2.8', 'tightenco/ziggy:^1.0', 'laravel/breeze:^1.14.3');
+        $this->requireComposerPackages(
+            'inertiajs/inertia-laravel:^0.6.3',
+            'laravel/sanctum:^2.8', 'tightenco/ziggy:^1.0', 
+            'laravel/breeze:^1.14.3'
+        );
 
         // NPM Packages...
         $this->updateNodePackages(function ($packages) {
