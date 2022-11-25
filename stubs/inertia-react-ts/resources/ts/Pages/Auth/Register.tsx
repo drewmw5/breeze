@@ -42,6 +42,7 @@ export default function Register() {
 
                     <Input
                         type="text"
+                        id="name"
                         name="name"
                         value={data.name}
                         className="block w-full mt-1"
@@ -57,6 +58,7 @@ export default function Register() {
 
                     <Input
                         type="email"
+                        id="email"
                         name="email"
                         value={data.email}
                         className="block w-full mt-1"
@@ -71,6 +73,7 @@ export default function Register() {
 
                     <Input
                         type="password"
+                        id="password"
                         name="password"
                         value={data.password}
                         className="block w-full mt-1"
@@ -85,6 +88,7 @@ export default function Register() {
 
                     <Input
                         type="password"
+                        id="password_confirmation"
                         name="password_confirmation"
                         value={data.password_confirmation}
                         className="block w-full mt-1"
