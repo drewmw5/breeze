@@ -40,7 +40,7 @@ jobs:
       - name: Setup Laravel
         run: |
           composer create-project laravel/laravel:^9 .
-          composer require laravel/breeze:* --no-interaction --no-update
+          composer require drewmw5/breeze:* --no-interaction --no-update
           composer config repositories.breeze '{"type": "path", "url": "breeze"}' --file composer.json
 
       - name: Checkout code
@@ -50,7 +50,7 @@ jobs:
 
       - name: Install Breeze
         run: |
-          composer update "laravel/breeze" --prefer-dist --no-interaction --no-progress -W
+          composer update "drewmw5/breeze" --prefer-dist --no-interaction --no-progress -W
           php artisan breeze:install ${{ matrix.stack }} ${{ matrix.args }}
 
       - name: Install NPM dependencies
