@@ -8,7 +8,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-## [Unreleased](https://github.com/laravel/breeze/compare/v3.6.3...master)
+## [Unreleased](https://github.com/laravel/breeze/compare/v3.6.4...master)
+
+## [v3.6.4](https://github.com/laravel/breeze/compare/v3.6.3...v3.6.4) - 2022-11-24
+
+### What's Changed
+
+- Merged forks by @drewmw5 in https://github.com/drewmw5/breeze/pull/3
+- Drewmw5 patch 3 by @drewmw5 in https://github.com/drewmw5/breeze/pull/5
+- Added react-ts 'stack' by @drewmw5 in https://github.com/drewmw5/breeze/pull/4
+- Master by @drewmw5 in https://github.com/drewmw5/breeze/pull/2
+
+### New Contributors
+
+- @drewmw5 made their first contribution in https://github.com/drewmw5/breeze/pull/3
+
+**Full Changelog**: https://github.com/drewmw5/breeze/compare/v3.6.3...v3.6.4
 
 ## [v3.6.3](https://github.com/laravel/breeze/compare/v3.6.2...v3.6.3) - 2022-11-24
 
