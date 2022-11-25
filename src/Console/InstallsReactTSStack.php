@@ -34,7 +34,7 @@ trait InstallsReactTSStack
                 '@tailwindcss/forms' => '^0.4.0',
                 "@types/react"=> "^17.0.43",
                 "@types/react-dom"=> "^17.0.14",
-                "@types/ziggy-js"=> "^1.3.2",
+                "@types/ziggy-js" => "^1.3.2",
                 '@vitejs/plugin-react' => '^2.0.0',
                 'autoprefixer' => '^10.4.2',
                 'postcss' => '^8.4.6',
