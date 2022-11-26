@@ -7,7 +7,7 @@ interface Props {
     className?: string;
 }
 
-const Button: React.FC<Props> = ({ type = 'submit', className = '', processing, children }) => {
+const Button: React.FC<Props> = ({ type = 'submit', className = '', processing, children }: Props) => {
     return (
         <button
             type={type}

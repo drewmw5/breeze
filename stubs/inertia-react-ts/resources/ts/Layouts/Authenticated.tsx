@@ -1,4 +1,4 @@
-import ApplicationLogo from "../Components/ApplicationLogo";
+import ApplicationLogo from "../Components/ApplicationLogo.tsx";
 import Dropdown from "../Components/Dropdown";
 import NavLink from "../Components/NavLink";
 import React, { useState } from "react";

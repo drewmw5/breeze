@@ -11,11 +11,11 @@ interface Context {
 
 const DropDownContext = React.createContext<Context>({} as Context);
 
-const Dropdown:React.FC = ({children}) => {
+const Dropdown:React.FC = ({children}: React.ReactNode) => {
     const [open, setOpen] = useState(false);
 
     const toggleOpen = () => {
-        setOpen((previousState) => !previousState);
+        setOpen((previousState: any) => !previousState);
     };
 
     return (
@@ -25,7 +25,7 @@ const Dropdown:React.FC = ({children}) => {
     );
 };
 
-const Trigger: React.FC = ({children}) => {
+const Trigger: React.FC = ({children}: React.ReactNode) => {
     const { open, setOpen, toggleOpen } = useContext(DropDownContext);
 
     return (
@@ -90,9 +90,10 @@ type LinkProps = {
     href?: string;
     method?: string;
     as?: string;
+    children?: React.ReactNode;
 }
 
-const Link: React.FC<LinkProps> = ({ href = '', method = 'post', as = 'a', children }) => {
+const Link: React.FC<LinkProps> = ({ href = '', method = 'post', as = 'a', children }: LinkProps) => {
     return (
         <InertiaLink
             href={href}

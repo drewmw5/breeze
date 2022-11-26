@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 
 interface Props {
     type?: string;
@@ -11,7 +11,7 @@ interface Props {
     handleChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-const Input: React.FC<Props> = ({
+const TextInput: React.FC<Props> = ({
     type = 'text',
     name,
     value,
@@ -36,7 +36,7 @@ const Input: React.FC<Props> = ({
                 name={name}
                 value={value}
                 className={
-                    `border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm ` +
+                    `border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm ` +
                     className
                 }
                 ref={input}
@@ -46,6 +46,6 @@ const Input: React.FC<Props> = ({
             />
         </div>
     );
-}
+};
 
-export default Input;
+export default TextInput;
