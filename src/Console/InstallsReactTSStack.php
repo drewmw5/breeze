@@ -47,15 +47,16 @@ trait InstallsReactTSStack
         });
 
         // Controllers...
-        (new Filesystem)->ensureDirectoryExists(app_path('Http/Controllers/Auth'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/inertia-common/app/Http/Controllers/Auth', app_path('Http/Controllers/Auth'));
+        (new Filesystem)->ensureDirectoryExists(app_path('Http/Controllers'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/inertia-common/app/Http/Controllers', app_path('Http/Controllers'));
 
         // Requests...
-        (new Filesystem)->ensureDirectoryExists(app_path('Http/Requests/Auth'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/default/app/Http/Requests/Auth', app_path('Http/Requests/Auth'));
+        (new Filesystem)->ensureDirectoryExists(app_path('Http/Requests'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/default/app/Http/Requests', app_path('Http/Requests'));
 
         // Middleware...
         $this->installMiddlewareAfter('SubstituteBindings::class', '\App\Http\Middleware\HandleInertiaRequests::class');
+        $this->installMiddlewareAfter('\App\Http\Middleware\HandleInertiaRequests::class', '\Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class');
 
         copy(__DIR__.'/../../stubs/inertia-common/app/Http/Middleware/HandleInertiaRequests.php', app_path('Http/Middleware/HandleInertiaRequests.php'));
 
@@ -74,6 +75,7 @@ trait InstallsReactTSStack
 
         // Tests...
         $this->installTests();
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/inertia-common/tests/Feature', base_path('tests/Feature'));
 
         // Routes...
         copy(__DIR__.'/../../stubs/inertia-common/routes/web.php', base_path('routes/web.php'));
