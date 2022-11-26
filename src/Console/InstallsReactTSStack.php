@@ -60,7 +60,7 @@ trait InstallsReactTSStack
         copy(__DIR__.'/../../stubs/inertia-common/app/Http/Middleware/HandleInertiaRequests.php', app_path('Http/Middleware/HandleInertiaRequests.php'));
 
         // Views...
-        copy(__DIR__.'/../../stubs/inertia-react-ts/views/app.blade.php', resource_path('views/app.blade.php'));
+        copy(__DIR__.'/../../stubs/inertia-react-ts/resources/views/app.blade.php', resource_path('views/app.blade.php'));
         $this->replaceInFile("@vite('resources/js/app.js')", '@viteReactRefresh'.PHP_EOL."        @vite('resources/js/app.tsx')", resource_path('views/app.blade.php'));
 
         // Components + Pages...
