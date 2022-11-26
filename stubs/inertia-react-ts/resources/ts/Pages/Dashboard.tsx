@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Authenticated from "../Layouts/Authenticated";
+import AuthenticatedLayout from "../Layouts/AuthenticatedLayout";
 
 interface Props {
   auth: any;
@@ -11,7 +11,7 @@ export default class Dashboard extends Component<Props> {
   componentDidMount() {}
   render() {
     return (
-      <Authenticated
+      <AuthenticatedLayout
         auth={this.props.auth}
         header={
           <h2 className="text-xl font-semibold leading-tight text-gray-800">
@@ -29,7 +29,7 @@ export default class Dashboard extends Component<Props> {
             </div>
           </div>
         </div>
-      </Authenticated>
+      </AuthenticatedLayout>
     );
   }
 }
