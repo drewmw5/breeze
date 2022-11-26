@@ -18,7 +18,7 @@ trait InstallsReactTSStack
         // Install Inertia...
         $this->requireComposerPackages(
             'inertiajs/inertia-laravel:^0.6.3',
-            'laravel/sanctum:^2.8', 'tightenco/ziggy:^1.0', 
+            'laravel/sanctum:^2.8', 'tightenco/ziggy:^1.0',
             'laravel/breeze:^1.14.3'
         );
 
@@ -33,6 +33,7 @@ trait InstallsReactTSStack
                 '@tailwindcss/forms' => '^0.4.0',
                 "@types/react"=> "^17.0.43",
                 "@types/react-dom"=> "^17.0.14",
+                "@types/ziggy-js"=> "^1.3.2",
                 '@vitejs/plugin-react' => '^2.0.0',
                 'autoprefixer' => '^10.4.2',
                 'postcss' => '^8.4.6',
