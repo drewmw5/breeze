@@ -10,10 +10,10 @@ import { Inertia } from "@inertiajs/inertia";
 interface Props {
   auth: any;
   header: React.ReactNode;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-export default function Authenticated({ auth, header, children }: Props) {
+export default function AuthenticatedLayout({ auth, header, children }: Props) {
   const [showingNavigationDropdown, setShowingNavigationDropdown] =
     useState(false);
 
