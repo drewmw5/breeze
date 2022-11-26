@@ -97,7 +97,7 @@ trait InstallsReactTSStack
             unlink(resource_path('js/app.js'));
         }
 
-        $this->replaceInFile('.js', '.tsx', base_path('tailwind.config.js'));
+        $this->replaceInFile('.vue', '.tsx', base_path('tailwind.config.js'));
         $this->replaceInFile('.jsx', '.tsx', base_path('vite.config.js'));
         $this->replaceInFile('.jsx', '.tsx', resource_path('views/app.blade.php'));
 
