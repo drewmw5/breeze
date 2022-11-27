@@ -1,16 +1,20 @@
 import React, { useState, useContext, Fragment } from 'react';
-import { Link } from '@inertiajs/inertia-react';
+import { Link, ReactComponent } from '@inertiajs/inertia-react';
 import { Transition } from '@headlessui/react';
 
 interface Context {
     open: boolean,
     setOpen: React.Dispatch<React.SetStateAction<boolean>>,
-    toggleOpen: React.FC<HTMLDivElement>,
+    toggleOpen: () => void,
 }
 
 const DropDownContext = React.createContext<Context>({} as Context);
 
-const Dropdown:React.FC = ({children}: React.ReactNode) => {
+interface DropDownProps {
+    children: React.ReactNode;
+  }
+
+const Dropdown = ({ children }: DropDownProps) => {
     const [open, setOpen] = useState(false);
 
     const toggleOpen = () => {
@@ -24,7 +28,11 @@ const Dropdown:React.FC = ({children}: React.ReactNode) => {
     );
 };
 
-const Trigger: React.FC = ({children}: React.ReactNode) => {
+interface TriggerProps {
+    children: React.ReactNode;
+}
+
+const Trigger = ({children}: TriggerProps) => {
     const { open, setOpen, toggleOpen } = useContext(DropDownContext);
 
     return (
