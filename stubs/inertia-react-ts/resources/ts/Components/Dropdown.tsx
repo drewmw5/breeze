@@ -5,7 +5,7 @@ import { Transition } from '@headlessui/react';
 interface Context {
     open: boolean,
     setOpen: React.Dispatch<React.SetStateAction<boolean>>,
-    toggleOpen: MouseEventHandler<HTMLDivElement>,
+    toggleOpen: React.FC<HTMLDivElement>,
 }
 
 const DropDownContext = React.createContext<Context>({} as Context);
