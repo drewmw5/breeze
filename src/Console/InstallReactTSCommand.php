@@ -48,7 +48,7 @@ class InstallReactTSCommand extends Command
             return $this->installInertiaVueStack();
         } elseif ($this->argument('stack') === 'react') {
             return $this->installInertiaReactStack();
-        } else if ($this->argument('stack') === 'react-ts') {
+        } elseif ($this->argument('stack') === 'react-ts') {
             return $this->installInertiaReactTSStack();
         } elseif ($this->argument('stack') === 'api') {
             return $this->installApiStack();
