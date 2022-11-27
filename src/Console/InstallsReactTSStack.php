@@ -73,6 +73,15 @@ trait InstallsReactTSStack
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/inertia-react-ts/resources/ts/Layouts', resource_path('js/Layouts'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/inertia-react-ts/resources/ts/Pages', resource_path('js/Pages'));
 
+        // Remove default dark styles if '--dark' argument is not specified
+        if (! $this->option('dark')) {
+            $this->removeDarkClasses((new Finder)
+                ->in(resource_path('js'))
+                ->name('*.tsx')
+                ->notName('Welcome.tsx')
+            );
+        }
+
         // Tests...
         $this->installTests();
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/inertia-common/tests/Feature', base_path('tests/Feature'));
