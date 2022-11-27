@@ -6,9 +6,13 @@ import TextInput from '@/Components/TextInput';
 import { useForm } from '@inertiajs/inertia-react';
 import { Transition } from '@headlessui/react';
 
-export default function UpdatePasswordForm({ className }) {
-    const passwordInput = useRef();
-    const currentPasswordInput = useRef();
+interface Props {
+    className?: string;
+}
+
+export default function UpdatePasswordForm({ className }: Props) {
+    const passwordInput= useRef() as React.MutableRefObject<HTMLInputElement>;
+    const currentPasswordInput = useRef() as React.MutableRefObject<HTMLInputElement>;
 
     const { data, setData, errors, put, reset, processing, recentlySuccessful } = useForm({
         current_password: '',
