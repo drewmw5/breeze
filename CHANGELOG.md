@@ -1,12 +1,5 @@
 # Release Notes
 
-<<<<<<< HEAD
-
-# <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ## [Unreleased](https://github.com/laravel/breeze/compare/v3.6.4...master)
 
