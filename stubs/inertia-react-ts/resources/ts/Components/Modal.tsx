@@ -78,7 +78,7 @@ export default function Modal({ children, show = false, maxWidth = '2xl', closea
                     </div>
                 </Transition.Child>
             </div>
-        </Transition>
+        </Transition>,
         modalRoot
     );
 }
