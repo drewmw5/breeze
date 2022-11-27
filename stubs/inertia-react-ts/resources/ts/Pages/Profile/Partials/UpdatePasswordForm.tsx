@@ -20,7 +20,7 @@ export default function UpdatePasswordForm({ className }: Props) {
         password_confirmation: '',
     });
 
-    const updatePassword = (e) => {
+    const updatePassword = (e: FormDataEvent) => {
         e.preventDefault();
 
         put(route('password.update'), {
@@ -60,7 +60,7 @@ export default function UpdatePasswordForm({ className }: Props) {
                         value={data.current_password}
                         handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('current_password', e.target.value)}
                         type="password"
-                        className="mt-1 block w-full"
+                        className="block w-full mt-1"
                         autocomplete="current-password"
                     />
 
@@ -76,7 +76,7 @@ export default function UpdatePasswordForm({ className }: Props) {
                         value={data.password}
                         handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('password', e.target.value)}
                         type="password"
-                        className="mt-1 block w-full"
+                        className="block w-full mt-1"
                         autocomplete="new-password"
                     />
 
@@ -91,7 +91,7 @@ export default function UpdatePasswordForm({ className }: Props) {
                         value={data.password_confirmation}
                         handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('password_confirmation', e.target.value)}
                         type="password"
-                        className="mt-1 block w-full"
+                        className="block w-full mt-1"
                         autocomplete="new-password"
                     />
 
