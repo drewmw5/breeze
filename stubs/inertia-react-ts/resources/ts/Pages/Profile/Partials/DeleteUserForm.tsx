@@ -30,7 +30,7 @@ export default function DeleteUserForm({ className }: Props) {
         setConfirmingUserDeletion(true);
     };
 
-    const deleteUser = (e) => {
+    const deleteUser = (e: React.FormEvent) => {
         e.preventDefault();
 
         destroy(route('profile.destroy'), {

@@ -6,7 +6,13 @@ import TextInput from '@/Components/TextInput';
 import { Link, useForm, usePage } from '@inertiajs/inertia-react';
 import { Transition } from '@headlessui/react';
 
-export default function UpdateProfileInformation({ mustVerifyEmail, status, className }) {
+interface Props {
+    mustVerifyEmail: boolean;
+    status: string;
+    className: string;
+}
+
+export default function UpdateProfileInformation({ mustVerifyEmail, status, className }: Props) {
     const user = usePage().props.auth.user;
 
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
@@ -14,7 +20,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
         email: user.email,
     });
 
-    const submit = (e) => {
+    const submit = (e: React.FormEvent) => {
         e.preventDefault();
 
         patch(route('profile.update'));
@@ -38,7 +44,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                         id="name"
                         className="mt-1 block w-full"
                         value={data.name}
-                        handleChange={(e) => setData('name', e.target.value)}
+                        handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('name', e.target.value)}
                         required
                         autofocus
                         autocomplete="name"
@@ -55,7 +61,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                         type="email"
                         className="mt-1 block w-full"
                         value={data.email}
-                        handleChange={(e) => setData('email', e.target.value)}
+                        handleChange={(e: ) => setData('email', e.target.value)}
                         required
                         autocomplete="email"
                     />

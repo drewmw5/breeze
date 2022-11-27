@@ -8,7 +8,7 @@ interface Props {
     onClick?: MouseEvent;
 }
 
-export default function DangerButton({ type = 'submit', className = '', processing, children, onClick }: Props) {
+export default function DangerButton({ type = 'submit', className = '', processing, children, onClick }: React.FC<Props>) {
     return (
         <button
             type={type}

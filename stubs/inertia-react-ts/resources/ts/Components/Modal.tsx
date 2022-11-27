@@ -2,7 +2,15 @@ import React, { useEffect, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from '@headlessui/react';
 
-export default function Modal({ children, show = false, maxWidth = '2xl', closeable = true, onClose = () => {} }) {
+interface Props {
+    children?: React.ReactNode;
+    show: boolean;
+    maxWidth: string;
+    closeable: boolean;
+    onClose: React.FC;
+}
+
+export default function Modal({ children, show = false, maxWidth = '2xl', closeable = true, onClose = () => {} }: Props) {
     useEffect(() => {
         document.body.style.overflow = show ? 'hidden' : null;
     }, [show]);
@@ -13,7 +21,7 @@ export default function Modal({ children, show = false, maxWidth = '2xl', closea
         }
     };
 
-    const closeOnEscape = (e) => {
+    const closeOnEscape = (e: KeyboardEvent) => {
         if (e.key === 'Escape' && props.show) {
             close();
         }

@@ -54,7 +54,7 @@ export default function UpdatePasswordForm({ className }) {
                         id="current_password"
                         ref={currentPasswordInput}
                         value={data.current_password}
-                        handleChange={(e) => setData('current_password', e.target.value)}
+                        handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('current_password', e.target.value)}
                         type="password"
                         className="mt-1 block w-full"
                         autocomplete="current-password"
@@ -70,7 +70,7 @@ export default function UpdatePasswordForm({ className }) {
                         id="password"
                         ref={passwordInput}
                         value={data.password}
-                        handleChange={(e) => setData('password', e.target.value)}
+                        handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('password', e.target.value)}
                         type="password"
                         className="mt-1 block w-full"
                         autocomplete="new-password"
@@ -85,7 +85,7 @@ export default function UpdatePasswordForm({ className }) {
                     <TextInput
                         id="password_confirmation"
                         value={data.password_confirmation}
-                        handleChange={(e) => setData('password_confirmation', e.target.value)}
+                        handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('password_confirmation', e.target.value)}
                         type="password"
                         className="mt-1 block w-full"
                         autocomplete="new-password"

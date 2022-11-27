@@ -1,14 +1,11 @@
-import Button from '../../Components/Button';
-import Checkbox from '../../Components/Checkbox';
-import Guest from '../../Layouts/Guest';
-import Input from '../../Components/Input';
-import Label from '../../Components/Label';
 import React, { useEffect } from 'react';
-import ValidationErrors from '../../Components/ValidationErrors';
-import { InertiaLink } from '@inertiajs/inertia-react';
-import { useForm } from '@inertiajs/inertia-react';
-import route from 'ziggy-js';
-import axios from "axios";
+import Checkbox from '@/Components/Checkbox';
+import GuestLayout from '@/Layouts/GuestLayout';
+import InputError from '@/Components/InputError';
+import InputLabel from '@/Components/InputLabel';
+import PrimaryButton from '@/Components/PrimaryButton';
+import TextInput from '@/Components/TextInput';
+import { Head, Link, useForm } from '@inertiajs/inertia-react';
 
 interface Props {
   status: string;
@@ -17,97 +14,87 @@ interface Props {
 
 export default function Login({ status, canResetPassword }: Props) {
   const { data, setData, post, processing, errors, reset } = useForm({
-    email: "",
-    password: "",
-    remember: "",
-  });
-
-  useEffect(() => {
-    return () => {
-      reset("password");
-    };
-  }, []);
-
-  const onHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setData(
-      event.target.name as "email" | "password" | "remember",
-      event.target.type === "checkbox"
-        ? event.target.checked + ""
-        : event.target.value
-    );
-  };
-
-  const submit = (e: React.SyntheticEvent) => {
-    e.preventDefault();
-
-    axios.get("/sanctum/csrf-cookie").then((resonse: any) => {
-      post(route("login"));
+        email: '',
+        password: '',
+        remember: '',
     });
-  };
 
-  return (
-    <Guest>
-      {status && (
-        <div className="mb-4 text-sm font-medium text-green-600">{status}</div>
-      )}
+    useEffect(() => {
+        return () => {
+            reset('password');
+        };
+    }, []);
 
-      <ValidationErrors errors={errors} />
+    const onHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setData(event.target.name, event.target.type === 'checkbox' ? event.target.checked : event.target.value);
+    };
 
-      <form onSubmit={submit}>
-        <div>
-          <Label forInput="email" value="Email" />
+    const submit = (e: React.FormEvent) => {
+        e.preventDefault();
 
-          <Input
-            type="text"
-            name="email"
-            value={data.email}
-            className="block w-full mt-1"
-            autoComplete="username"
-            isFocused={true}
-            handleChange={onHandleChange}
-          />
-        </div>
+        post(route('login'));
+    };
 
-        <div className="mt-4">
-          <Label forInput="password" value="Password" />
+    return (
+        <GuestLayout>
+            <Head title="Log in" />
 
-          <Input
-            type="password"
-            name="password"
-            value={data.password}
-            className="block w-full mt-1"
-            autoComplete="current-password"
-            handleChange={onHandleChange}
-          />
-        </div>
+            {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
 
-        <div className="block mt-4">
-          <label className="flex items-center">
-            <Checkbox
-              name="remember"
-              value={data.remember}
-              handleChange={onHandleChange}
-            />
+            <form onSubmit={submit}>
+                <div>
+                    <InputLabel forInput="email" value="Email" />
 
-            <span className="ml-2 text-sm text-gray-600">Remember me</span>
-          </label>
-        </div>
+                    <TextInput
+                        type="email"
+                        name="email"
+                        value={data.email}
+                        className="mt-1 block w-full"
+                        autoComplete="username"
+                        isFocused={true}
+                        handleChange={onHandleChange}
+                    />
 
-        <div className="flex items-center justify-end mt-4">
-          {canResetPassword && (
-            <InertiaLink
-              href={route("password.request")}
-              className="text-sm text-gray-600 underline hover:text-gray-900"
-            >
-              Forgot your password?
-            </InertiaLink>
-          )}
+                    <InputError message={errors.email} className="mt-2" />
+                </div>
 
-          <Button className="ml-4 bg-theme_title" processing={processing}>
-            Log in
-          </Button>
-        </div>
-      </form>
-    </Guest>
-  );
+                <div className="mt-4">
+                    <InputLabel forInput="password" value="Password" />
+
+                    <TextInput
+                        type="password"
+                        name="password"
+                        value={data.password}
+                        className="mt-1 block w-full"
+                        autoComplete="current-password"
+                        handleChange={onHandleChange}
+                    />
+
+                    <InputError message={errors.password} className="mt-2" />
+                </div>
+
+                <div className="block mt-4">
+                    <label className="flex items-center">
+                        <Checkbox name="remember" value={data.remember} handleChange={onHandleChange} />
+                        <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">Remember me</span>
+                    </label>
+                </div>
+
+                <div className="flex items-center justify-end mt-4">
+                    {canResetPassword && (
+                        <Link
+                            href={route('password.request')}
+                            className="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                        >
+                            Forgot your password?
+                        </Link>
+                    )}
+
+                    <PrimaryButton className="ml-4" processing={processing}>
+                        Log in
+                    </PrimaryButton>
+                </div>
+            </form>
+        </GuestLayout>
+    );
 }

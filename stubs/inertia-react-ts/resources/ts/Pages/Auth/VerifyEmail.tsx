@@ -1,50 +1,46 @@
-import Button from '../../Components/Button';
-import Guest from '../../Layouts/Guest';
 import React from 'react';
-import { InertiaLink } from '@inertiajs/inertia-react';
-import { useForm } from '@inertiajs/inertia-react';
-import route from 'ziggy-js';
+import GuestLayout from '@/Layouts/GuestLayout';
+import PrimaryButton from '@/Components/PrimaryButton';
+import { Head, Link, useForm } from '@inertiajs/inertia-react';
 
-interface Props {
-    status: string;
-}
+export default function VerifyEmail({ status }) {
+    const { post, processing } = useForm();
 
-export default function VerifyEmail({ status }: Props) {
-    const { post, processing } = useForm({});
-
-    const submit = (e: React.SyntheticEvent) => {
+    const submit = (e: React.FormEvent) => {
         e.preventDefault();
 
         post(route('verification.send'));
     };
 
     return (
-        <Guest>
-            <div className="mb-4 text-sm text-gray-600">
+        <GuestLayout>
+            <Head title="Email Verification" />
+
+            <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
                 Thanks for signing up! Before getting started, could you verify your email address by clicking on the
                 link we just emailed to you? If you didn't receive the email, we will gladly send you another.
             </div>
 
             {status === 'verification-link-sent' && (
-                <div className="mb-4 font-medium text-sm text-green-600">
+                <div className="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
                     A new verification link has been sent to the email address you provided during registration.
                 </div>
             )}
 
             <form onSubmit={submit}>
                 <div className="mt-4 flex items-center justify-between">
-                    <Button processing={processing}>Resend Verification Email</Button>
+                    <PrimaryButton processing={processing}>Resend Verification Email</PrimaryButton>
 
-                    <InertiaLink
+                    <Link
                         href={route('logout')}
                         method="post"
                         as="button"
-                        className="underline text-sm text-gray-600 hover:text-gray-900"
+                        className="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
                     >
                         Log Out
-                    </InertiaLink>
+                    </Link>
                 </div>
             </form>
-        </Guest>
+        </GuestLayout>
     );
 }
