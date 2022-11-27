@@ -89,7 +89,7 @@ type LinkProps = {
     children?: React.ReactNode;
 }
 
-const Link: React.FC<LinkProps> = ({ href = '', method = 'post', as = 'a', children }: LinkProps) => {
+const DropdownLink: React.FC<LinkProps> = ({ href = '', method = 'post', as = 'a', children }: LinkProps) => {
     return (
         <Link
             href={href}
