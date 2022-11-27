@@ -2,8 +2,6 @@ import React, { useState, useContext, Fragment } from 'react';
 import { Link } from '@inertiajs/inertia-react';
 import { Transition } from '@headlessui/react';
 
-const DropDownContext = React.createContext();
-
 interface Context {
     open: boolean,
     setOpen: React.Dispatch<React.SetStateAction<boolean>>,
