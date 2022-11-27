@@ -6,7 +6,7 @@ interface Props {
     handleChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-export default function Checkbox({ name, value, handleChange }: React.FC<Props>) {
+export default function Checkbox({ name, value, handleChange }: Props) {
     return (
         <input
             type="checkbox"

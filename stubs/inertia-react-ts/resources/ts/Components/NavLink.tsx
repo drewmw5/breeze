@@ -1,5 +1,5 @@
-import React, { LinkHTMLAttributes } from 'react';
-import { InertiaLink, Link } from '@inertiajs/inertia-react';
+import React from 'react';
+import { Link } from '@inertiajs/inertia-react';
 
 interface Props {
     href: string;

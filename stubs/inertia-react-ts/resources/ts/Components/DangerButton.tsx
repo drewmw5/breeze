@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
 interface Props {
     children: React.ReactNode;
     type?: "submit" | "button" | "reset" | undefined;
     processing: boolean;
     className?: string;
-    onClick?: MouseEvent;
+    onClick?: MouseEventHandler<HTMLElement>;
 }
 
-export default function DangerButton({ type = 'submit', className = '', processing, children, onClick }: React.FC<Props>) {
+export default function DangerButton({ type = 'submit', className = '', processing, children, onClick }: Props) {
     return (
         <button
             type={type}

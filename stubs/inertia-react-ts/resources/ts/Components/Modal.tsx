@@ -7,7 +7,7 @@ interface Props {
     show: boolean;
     maxWidth: string;
     closeable: boolean;
-    onClose: React.FC;
+    onClose: () => void;
 }
 
 export default function Modal({ children, show = false, maxWidth = '2xl', closeable = true, onClose = () => {} }: Props) {
@@ -31,7 +31,7 @@ export default function Modal({ children, show = false, maxWidth = '2xl', closea
         document.addEventListener('keydown', closeOnEscape);
         return () => {
             document.removeEventListener('keydown', closeOnEscape);
-            document.body.style.overflow = null;
+            document.body.style.overflow = '';
         };
     }, []);
 
@@ -47,7 +47,7 @@ export default function Modal({ children, show = false, maxWidth = '2xl', closea
 
     return ReactDOM.createPortal(
         <Transition show={show} leave="duration-200">
-            <div className="fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50">
+            <div className="fixed inset-0 z-50 px-4 py-6 overflow-y-auto sm:px-0">
                 <Transition.Child
                     as={Fragment}
                     enter="ease-out duration-300"
@@ -57,8 +57,8 @@ export default function Modal({ children, show = false, maxWidth = '2xl', closea
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="fixed inset-0 transform transition-all" onClick={close}>
-                        <div className="absolute inset-0 bg-gray-500 dark:bg-gray-900 opacity-75"></div>
+                    <div className="fixed inset-0 transition-all transform" onClick={close}>
+                        <div className="absolute inset-0 bg-gray-500 opacity-75 dark:bg-gray-900"></div>
                     </div>
                 </Transition.Child>
 
@@ -78,7 +78,7 @@ export default function Modal({ children, show = false, maxWidth = '2xl', closea
                     </div>
                 </Transition.Child>
             </div>
-        </Transition>,
+        </Transition>
         modalRoot
     );
 }

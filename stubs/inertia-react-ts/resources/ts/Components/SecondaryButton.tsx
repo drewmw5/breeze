@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
 interface Props {
     children: React.ReactNode;
     type?: "submit" | "button" | "reset" | undefined;
     processing: boolean;
     className?: string;
-    onClick: MouseEvent;
+    onClick?: MouseEventHandler<HTMLElement>;
 }
 
 export default function SecondaryButton({ type = 'button', className = '', processing, children, onClick }: Props) {
