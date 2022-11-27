@@ -61,7 +61,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                         type="email"
                         className="mt-1 block w-full"
                         value={data.email}
-                        handleChange={(e: ) => setData('email', e.target.value)}
+                        handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('email', e.target.value)}
                         required
                         autocomplete="email"
                     />
