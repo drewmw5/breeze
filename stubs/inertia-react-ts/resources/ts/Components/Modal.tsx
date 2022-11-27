@@ -12,7 +12,7 @@ interface Props {
 
 export default function Modal({ children, show = false, maxWidth = '2xl', closeable = true, onClose = () => {} }: Props) {
     useEffect(() => {
-        document.body.style.overflow = show ? 'hidden' : null;
+        document.body.style.overflow = show ? 'hidden' : '';
     }, [show]);
 
     const close = () => {
@@ -22,7 +22,7 @@ export default function Modal({ children, show = false, maxWidth = '2xl', closea
     };
 
     const closeOnEscape = (e: KeyboardEvent) => {
-        if (e.key === 'Escape' && props.show) {
+        if (e.key === 'Escape' && show) {
             close();
         }
     };
