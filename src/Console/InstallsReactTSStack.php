@@ -27,6 +27,7 @@ trait InstallsReactTSStack
         // NPM Packages...
         $this->updateNodePackages(function ($packages) {
             return [
+                '@babel/preset-react' => '^7.16.7',
                 '@headlessui/react' => '^1.4.2',
                 '@inertiajs/inertia' => '^0.11.0',
                 '@inertiajs/inertia-react' => '^0.8.1',
@@ -38,8 +39,8 @@ trait InstallsReactTSStack
                 '@vitejs/plugin-react' => '^2.0.0',
                 'autoprefixer' => '^10.4.12',
                 'postcss' => '^8.4.18',
-                'react' => '^17.0.2',
-                'react-dom' => '^17.0.2',
+                'react' => '^18.2.0',
+                'react-dom' => '^18.2.0',
                 'tailwindcss' => '^3.2.1',
             ] + $packages;
         });
