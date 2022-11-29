@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface Props {
     name: string;
     value: string;
@@ -12,7 +10,7 @@ export default function Checkbox({ name, value, handleChange }: Props) {
             type="checkbox"
             name={name}
             value={value}
-            className="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
+            className="text-indigo-600 border-gray-300 rounded shadow-sm dark:bg-gray-900 dark:border-gray-700 focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
             onChange={(e) => handleChange(e)}
         />
     );

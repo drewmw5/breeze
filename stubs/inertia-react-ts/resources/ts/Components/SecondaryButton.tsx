@@ -1,7 +1,7 @@
-import React, { MouseEventHandler } from 'react';
+import { ReactNode, MouseEventHandler } from 'react';
 
 interface Props {
-    children: React.ReactNode;
+    children: ReactNode;
     type?: "submit" | "button" | "reset" | undefined;
     processing: boolean;
     className?: string;

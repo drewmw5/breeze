@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Checkbox from '@/Components/Checkbox';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
@@ -26,7 +26,7 @@ export default function Login({ status, canResetPassword }: Props) {
     }, []);
 
     const onHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setData(event.target.name, event.target.type === 'checkbox' ? event.target.checked : event.target.value);
+        setData(event.target.name  as  "email" | "password" | "remember", event.target.type === 'checkbox' ? event.target.checked + '' : event.target.value);
     };
 
     const submit = (e: React.FormEvent) => {
@@ -46,6 +46,7 @@ export default function Login({ status, canResetPassword }: Props) {
                     <InputLabel forInput="email" value="Email" />
 
                     <TextInput
+                        id="email"
                         type="email"
                         name="email"
                         value={data.email}
@@ -62,6 +63,7 @@ export default function Login({ status, canResetPassword }: Props) {
                     <InputLabel forInput="password" value="Password" />
 
                     <TextInput
+                        id="password"
                         type="password"
                         name="password"
                         value={data.password}
