@@ -1,66 +1,6 @@
 # Release Notes
 
 
-## [Unreleased](https://github.com/laravel/breeze/compare/v3.6.4...master)
-
-## [v3.6.4](https://github.com/laravel/breeze/compare/v3.6.3...v3.6.4) - 2022-11-24
-
-### What's Changed
-
-- Merged forks by @drewmw5 in https://github.com/drewmw5/breeze/pull/3
-- Drewmw5 patch 3 by @drewmw5 in https://github.com/drewmw5/breeze/pull/5
-- Added react-ts 'stack' by @drewmw5 in https://github.com/drewmw5/breeze/pull/4
-- Master by @drewmw5 in https://github.com/drewmw5/breeze/pull/2
-
-### New Contributors
-
-- @drewmw5 made their first contribution in https://github.com/drewmw5/breeze/pull/3
-
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v3.6.3...v3.6.4
-
-## [v3.6.3](https://github.com/laravel/breeze/compare/v3.6.2...v3.6.3) - 2022-11-24
-
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v3.6.2...v3.6.3
-
-## [v3.6.2](https://github.com/laravel/breeze/compare/v3.6.1...v3.6.2) - 2022-11-24
-
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v3.6.1...v3.6.2
-
-## [v3.6.1](https://github.com/laravel/breeze/compare/v3.6.0...v3.6.1) - 2022-11-24
-
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v3.6.0...v3.6.1
-
-## [v3.6.0](https://github.com/laravel/breeze/compare/v3.5.0...v3.6.0) - 2022-11-24
-
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v3.5.0...v3.6.0
-
-## [v3.5.0](https://github.com/laravel/breeze/compare/v3.4.0...v3.5.0) - 2022-11-24
-
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v3.4.0...v3.5.0
-
-## [v3.4.0](https://github.com/laravel/breeze/compare/v3.3.0...v3.4.0) - 2022-11-24
-
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v3.3.0...v3.4.0
-
-## [v3.3.0](https://github.com/laravel/breeze/compare/v1.6.1...v3.3.0) - 2022-11-23
-
-**Full Changelog**: https://github.com/drewmw5/breeze/compare/v1.14.0...v3.3.0
-
-## [v1.6.1 (2022-01-04)](https://github.com/laravel/breeze/compare/v1.6.0...v1.6.1)
-
-### Changed
-
-- Fix Inertia Controllers @return tag and Inertia Vue Input Component by @thewebartisan7 in https://github.com/laravel/breeze/pull/112
-- Update outdated dependencies for react stack by @eumatv in https://github.com/laravel/breeze/pull/114
-
-> > > > > > > b29e25e (Update CHANGELOG.md)
-
-## [Unreleased](https://github.com/laravel/breeze/compare/v1.14.0...master)
-
-## [v1.14.0](https://github.com/laravel/breeze/compare/v1.6.0...v1.14.0) - 2022-09-21
-
-=======
-
 ## [Unreleased](https://github.com/laravel/breeze/compare/v1.9.1...1.x)
 
 > > > > > > > 71f0210 (Update CHANGELOG)
@@ -78,6 +18,16 @@
 =======
 
 ## [Unreleased](https://github.com/laravel/breeze/compare/v1.15.2...1.x)
+=======
+## [Unreleased](https://github.com/laravel/breeze/compare/v1.15.3...1.x)
+
+## [v1.15.3](https://github.com/laravel/breeze/compare/v1.15.2...v1.15.3) - 2022-11-28
+
+### Fixed
+
+- Fix-psr-4-warning by @Kamona-WD in https://github.com/laravel/breeze/pull/221
+- Status must be String by @marsuboss in https://github.com/laravel/breeze/pull/219
+- Fix close modal with escape keydown and cleanup import react by @fouteox in https://github.com/laravel/breeze/pull/218
 
 ## [v1.15.2](https://github.com/laravel/breeze/compare/v1.15.1...v1.15.2) - 2022-11-21
 
