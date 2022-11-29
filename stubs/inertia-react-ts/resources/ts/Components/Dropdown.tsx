@@ -1,5 +1,5 @@
-import React, { useState, useContext, Fragment } from 'react';
-import { Link, ReactComponent } from '@inertiajs/inertia-react';
+import { useState, createContext, useContext, Fragment } from 'react';
+import { Link } from '@inertiajs/inertia-react';
 import { Transition } from '@headlessui/react';
 
 interface Context {
@@ -8,7 +8,7 @@ interface Context {
     toggleOpen: () => void,
 }
 
-const DropDownContext = React.createContext<Context>({} as Context);
+const DropDownContext = eateContext<Context>({} as Context);
 
 interface DropDownProps {
     children: React.ReactNode;

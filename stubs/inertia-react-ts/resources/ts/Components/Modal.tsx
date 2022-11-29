@@ -1,6 +1,5 @@
-import React, { useEffect, Fragment } from 'react';
-import ReactDOM from 'react-dom';
-import { Transition } from '@headlessui/react';
+import { Fragment } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
 
 interface Props {
     children?: React.ReactNode;
@@ -21,20 +20,6 @@ export default function Modal({ children, show = false, maxWidth = '2xl', closea
         }
     };
 
-    const closeOnEscape = (e: KeyboardEvent) => {
-        if (e.key === 'Escape' && show) {
-            close();
-        }
-    };
-
-    useEffect(() => {
-        document.addEventListener('keydown', closeOnEscape);
-        return () => {
-            document.removeEventListener('keydown', closeOnEscape);
-            document.body.style.overflow = '';
-        };
-    }, []);
-
     const maxWidthClass = {
         sm: 'sm:max-w-sm',
         md: 'sm:max-w-md',
@@ -43,11 +28,14 @@ export default function Modal({ children, show = false, maxWidth = '2xl', closea
         '2xl': 'sm:max-w-2xl',
     }[maxWidth];
 
-    const modalRoot = document.getElementById('modal-root');
-
-    return ReactDOM.createPortal(
-        <Transition show={show} leave="duration-200">
-            <div className="fixed inset-0 z-50 px-4 py-6 overflow-y-auto sm:px-0">
+    return (
+        <Transition show={show} as={Fragment} leave="duration-200">
+            <Dialog
+                as="div"
+                id="modal"
+                className="fixed inset-0 z-50 flex items-center px-4 py-6 overflow-y-auto transition-all transform sm:px-0"
+                onClose={close}
+            >
                 <Transition.Child
                     as={Fragment}
                     enter="ease-out duration-300"
@@ -57,9 +45,7 @@ export default function Modal({ children, show = false, maxWidth = '2xl', closea
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="fixed inset-0 transition-all transform" onClick={close}>
-                        <div className="absolute inset-0 bg-gray-500 opacity-75 dark:bg-gray-900"></div>
-                    </div>
+                    <div className="absolute inset-0 bg-gray-500/75 dark:bg-gray-900/75" />
                 </Transition.Child>
 
                 <Transition.Child
@@ -71,14 +57,13 @@ export default function Modal({ children, show = false, maxWidth = '2xl', closea
                     leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                     leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                    <div
+                    <Dialog.Panel
                         className={`mb-6 bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:mx-auto ${maxWidthClass}`}
                     >
                         {children}
-                    </div>
+                    </Dialog.Panel>
                 </Transition.Child>
-            </div>
-        </Transition>,
-        modalRoot
+            </Dialog>
+        </Transition>
     );
 }
