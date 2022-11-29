@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - '*.x'
+      - merge
   pull_request:
   schedule:
     - cron: '0 0 * * *'
