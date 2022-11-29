@@ -8,7 +8,7 @@ interface Context {
     toggleOpen: () => void,
 }
 
-const DropDownContext = eateContext<Context>({} as Context);
+const DropDownContext = createContext<Context>({} as Context);
 
 interface DropDownProps {
     children: React.ReactNode;
