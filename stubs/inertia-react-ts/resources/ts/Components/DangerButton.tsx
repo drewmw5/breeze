@@ -1,9 +1,9 @@
 interface Props {
     children: React.ReactNode;
     type?: "submit" | "button" | "reset" | undefined;
-    processing: boolean;
+    processing?: boolean;
     className?: string;
-    onClick?: MouseEventHandler<HTMLElement>;
+    onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
 export default function DangerButton({ type = 'submit', className = '', processing, children, onClick }: Props) {

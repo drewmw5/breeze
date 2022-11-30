@@ -14,7 +14,7 @@ export default function ForgotPassword({ status }: Props) {
     });
 
     const onHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setData(event.target.name, event.target.value);
+        setData(event.target.name as "email", event.target.value);
     };
 
     const submit = (e: React.FormEvent) => {
@@ -41,7 +41,7 @@ export default function ForgotPassword({ status }: Props) {
                     name="email"
                     value={data.email}
                     className="mt-1 block w-full"
-                    isFocused={true}
+                    isFocused
                     handleChange={onHandleChange}
                 />
 

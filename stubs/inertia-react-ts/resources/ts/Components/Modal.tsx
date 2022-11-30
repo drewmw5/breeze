@@ -4,16 +4,12 @@ import { Dialog, Transition } from '@headlessui/react';
 interface Props {
     children?: React.ReactNode;
     show: boolean;
-    maxWidth: string;
-    closeable: boolean;
+    maxWidth?: string;
+    closeable?: boolean;
     onClose: () => void;
 }
 
 export default function Modal({ children, show = false, maxWidth = '2xl', closeable = true, onClose = () => {} }: Props) {
-    useEffect(() => {
-        document.body.style.overflow = show ? 'hidden' : '';
-    }, [show]);
-
     const close = () => {
         if (closeable) {
             onClose();

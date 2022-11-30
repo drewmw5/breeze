@@ -8,7 +8,7 @@ interface Context {
     toggleOpen: () => void,
 }
 
-const DropDownContext = eateContext<Context>({} as Context);
+const DropDownContext = createContext<Context>({} as Context);
 
 interface DropDownProps {
     children: React.ReactNode;
@@ -48,6 +48,7 @@ type ContentProps = {
     align?: string;
     width?: string;
     contentClasses?: string;
+    children?: React.ReactNode;
 }
 
 const Content: React.FC<ContentProps> = ({ align = 'right', width = '48', contentClasses = 'py-1 bg-white', children }) => {

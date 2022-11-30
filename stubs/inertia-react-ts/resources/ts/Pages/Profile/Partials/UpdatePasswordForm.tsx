@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, FormEvent } from 'react';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
@@ -20,7 +20,7 @@ export default function UpdatePasswordForm({ className }: Props) {
         password_confirmation: '',
     });
 
-    const updatePassword = (e: FormDataEvent) => {
+    const updatePassword = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         put(route('password.update'), {
@@ -52,47 +52,47 @@ export default function UpdatePasswordForm({ className }: Props) {
 
             <form onSubmit={updatePassword} className="mt-6 space-y-6">
                 <div>
-                    <InputLabel for="current_password" value="Current Password" />
+                    <InputLabel forInput="current_password" value="Current Password" />
 
                     <TextInput
                         id="current_password"
                         ref={currentPasswordInput}
                         value={data.current_password}
-                        handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('current_password', e.target.value)}
+                        handleChange={(e)=> setData('current_password', e.target.value)}
                         type="password"
                         className="block w-full mt-1"
-                        autocomplete="current-password"
+                        autoComplete="current-password"
                     />
 
                     <InputError message={errors.current_password} className="mt-2" />
                 </div>
 
                 <div>
-                    <InputLabel for="password" value="New Password" />
+                    <InputLabel forInput="password" value="New Password" />
 
                     <TextInput
                         id="password"
                         ref={passwordInput}
                         value={data.password}
-                        handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('password', e.target.value)}
+                        handleChange={(e) => setData('password', e.target.value)}
                         type="password"
                         className="block w-full mt-1"
-                        autocomplete="new-password"
+                        autoComplete="new-password"
                     />
 
                     <InputError message={errors.password} className="mt-2" />
                 </div>
 
                 <div>
-                    <InputLabel for="password_confirmation" value="Confirm Password" />
+                    <InputLabel forInput="password_confirmation" value="Confirm Password" />
 
                     <TextInput
                         id="password_confirmation"
                         value={data.password_confirmation}
-                        handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('password_confirmation', e.target.value)}
+                        handleChange={(e) => setData('password_confirmation', e.target.value)}
                         type="password"
                         className="block w-full mt-1"
-                        autocomplete="new-password"
+                        autoComplete="new-password"
                     />
 
                     <InputError message={errors.password_confirmation} className="mt-2" />

@@ -100,6 +100,7 @@ trait InstallsReactTSStack
         copy(__DIR__.'/../../stubs/inertia-common/jsconfig.json', base_path('jsconfig.json'));
         copy(__DIR__.'/../../stubs/inertia-react-ts/vite.config.ts', base_path('vite.config.js'));
         copy(__DIR__.'/../../stubs/inertia-react-ts/tsconfig.json', base_path('tsconfig.json'));
+        copy(__DIR__.'/../../stubs/inertia-react-ts/globals.d.ts', base_path('globals.d.ts'));
         copy(__DIR__.'/../../stubs/inertia-react-ts/resources/ts/app.tsx', resource_path('js/app.tsx'));
 
         if (file_exists(resource_path('js/app.js'))) {

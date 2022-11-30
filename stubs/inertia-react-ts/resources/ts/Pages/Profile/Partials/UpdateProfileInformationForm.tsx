@@ -3,6 +3,7 @@ import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { Link, useForm, usePage } from '@inertiajs/inertia-react';
+import type { Page, PageProps, Errors, ErrorBag } from '@inertiajs/inertia';
 import { Transition } from '@headlessui/react';
 
 interface Props {
@@ -11,8 +12,20 @@ interface Props {
     className: string;
 }
 
-export default function UpdateProfileInformation({ mustVerifyEmail, status, className }: Props) {
-    const user = usePage().props.auth.user;
+interface InertiaPage extends Page<PageProps> {
+    props: {
+        errors: Errors & ErrorBag;
+        auth: {
+            user: {
+                name: string;
+                email: string;
+            };
+        };
+    };
+}
+
+export default function UpdateProfileInformation({ mustVerifyEmail, status, className, }: Props) {
+    const user = usePage<InertiaPage>().props.auth.user;
 
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
         name: user.name,
@@ -37,32 +50,32 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
 
             <form onSubmit={submit} className="mt-6 space-y-6">
                 <div>
-                    <InputLabel for="name" value="Name" />
+                    <InputLabel forInput="name" value="Name" />
 
                     <TextInput
                         id="name"
                         className="mt-1 block w-full"
                         value={data.name}
-                        handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('name', e.target.value)}
+                        handleChange={(e) => setData('name', e.target.value)}
                         required
-                        autofocus
-                        autocomplete="name"
+                        autoFocus
+                        autoComplete="name"
                     />
 
                     <InputError className="mt-2" message={errors.name} />
                 </div>
 
                 <div>
-                    <InputLabel for="email" value="Email" />
+                    <InputLabel forInput="email" value="Email" />
 
                     <TextInput
                         id="email"
                         type="email"
                         className="mt-1 block w-full"
                         value={data.email}
-                        handleChange={(e: React.FormEvent<HTMLInputElement>) => setData('email', e.target.value)}
+                        handleChange={(e) => setData('email', e.target.value)}
                         required
-                        autocomplete="email"
+                        autoComplete="email"
                     />
 
                     <InputError className="mt-2" message={errors.email} />

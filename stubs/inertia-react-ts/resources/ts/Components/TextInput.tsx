@@ -1,14 +1,17 @@
-import { forwardRef, useEffect, useRef } from 'react';
+import { MutableRefObject, useEffect, useRef } from 'react';
 
 interface Props {
     type?: string;
-    name: string;
-    id: number;
+    name?: string;
+    id: string | undefined;
     value: string;
+    ref?: MutableRefObject<HTMLInputElement>;
     className?: string;
     autoComplete?: string | undefined;
     required?: boolean;
+    autoFocus?: boolean;
     isFocused?: boolean;
+    placeHolder?: string;
     handleChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 

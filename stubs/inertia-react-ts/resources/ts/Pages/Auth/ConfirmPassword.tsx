@@ -18,7 +18,7 @@ export default function ConfirmPassword() {
     }, []);
 
     const onHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setData(event.target.name, event.target.value);
+        setData(event.target.name as "password", event.target.value);
     };
 
     const submit = (e: React.FormEvent) => {
@@ -45,7 +45,7 @@ export default function ConfirmPassword() {
                         name="password"
                         value={data.password}
                         className="block w-full mt-1"
-                        isFocused={true}
+                        isFocused
                         handleChange={onHandleChange}
                     />
 
