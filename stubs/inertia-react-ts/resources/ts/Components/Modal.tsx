@@ -10,10 +10,6 @@ interface Props {
 }
 
 export default function Modal({ children, show = false, maxWidth = '2xl', closeable = true, onClose = () => {} }: Props) {
-    useEffect(() => {
-        document.body.style.overflow = show ? 'hidden' : '';
-    }, [show]);
-
     const close = () => {
         if (closeable) {
             onClose();
