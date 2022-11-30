@@ -4,8 +4,8 @@ import { Dialog, Transition } from '@headlessui/react';
 interface Props {
     children?: React.ReactNode;
     show: boolean;
-    maxWidth: string;
-    closeable: boolean;
+    maxWidth?: string;
+    closeable?: boolean;
     onClose: () => void;
 }
 

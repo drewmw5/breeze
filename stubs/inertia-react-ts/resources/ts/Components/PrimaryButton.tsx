@@ -3,7 +3,7 @@ interface Props {
     type?: "submit" | "button" | "reset" | undefined;
     processing: boolean;
     className?: string;
-    onClick?: MouseEventHandler<HTMLElement>;
+    onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
 export default function PrimaryButton({ type = 'submit', className = '', processing, children, onClick }: Props) {

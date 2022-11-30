@@ -3,7 +3,7 @@ import { ReactNode, MouseEventHandler } from 'react';
 interface Props {
     children: ReactNode;
     type?: "submit" | "button" | "reset" | undefined;
-    processing: boolean;
+    processing?: boolean;
     className?: string;
     onClick?: MouseEventHandler<HTMLElement>;
 }

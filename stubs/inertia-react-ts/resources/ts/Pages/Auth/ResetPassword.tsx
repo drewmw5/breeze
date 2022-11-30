@@ -77,6 +77,7 @@ export default function ResetPassword({ token, email }: Props) {
                     <InputLabel forInput="password_confirmation" value="Confirm Password" />
 
                     <TextInput
+                        id="password_confirmation"
                         type="password"
                         name="password_confirmation"
                         value={data.password_confirmation}

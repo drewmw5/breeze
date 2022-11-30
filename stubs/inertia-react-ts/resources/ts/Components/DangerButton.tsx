@@ -1,7 +1,7 @@
 interface Props {
     children: React.ReactNode;
     type?: "submit" | "button" | "reset" | undefined;
-    processing: boolean;
+    processing?: boolean;
     className?: string;
     onClick?: React.MouseEventHandler<HTMLElement>;
 }

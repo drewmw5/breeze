@@ -10,7 +10,7 @@ export default function Dashboard(props: Props) {
     return (
         <AuthenticatedLayout
             auth={props.auth}
-            errors={props.errors}
+            error={props.errors}
             header={<h2 className="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">Dashboard</h2>}
         >
             <Head title="Dashboard" />

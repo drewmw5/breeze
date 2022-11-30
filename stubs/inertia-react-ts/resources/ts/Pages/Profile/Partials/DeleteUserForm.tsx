@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, FormEvent } from 'react';
 import DangerButton from '@/Components/DangerButton';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
@@ -13,7 +13,7 @@ interface Props {
 
 export default function DeleteUserForm({ className }: Props) {
     const [confirmingUserDeletion, setConfirmingUserDeletion] = useState(false);
-    const passwordInput = useRef();
+    const passwordInput = useRef() as React.MutableRefObject<HTMLInputElement>;
 
     const {
         data,
@@ -30,7 +30,7 @@ export default function DeleteUserForm({ className }: Props) {
         setConfirmingUserDeletion(true);
     };
 
-    const deleteUser = (e: React.FormEvent) => {
+    const deleteUser = (e: FormEvent) => {
         e.preventDefault();
 
         destroy(route('profile.destroy'), {
@@ -72,7 +72,7 @@ export default function DeleteUserForm({ className }: Props) {
                     </p>
 
                     <div className="mt-6">
-                        <InputLabel for="password" value="Password" className="sr-only" />
+                        <InputLabel forInput="password" value="Password" className="sr-only" />
 
                         <TextInput
                             id="password"
@@ -83,7 +83,7 @@ export default function DeleteUserForm({ className }: Props) {
                             handleChange={(e) => setData('password', e.target.value)}
                             className="mt-1 block w-3/4"
                             isFocused
-                            placeholder="Password"
+                            placeHolder="Password"
                         />
 
                         <InputError message={errors.password} className="mt-2" />
