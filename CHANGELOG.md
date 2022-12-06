@@ -1,25 +1,12 @@
 # Release Notes
 
+## [Unreleased](https://github.com/laravel/breeze/compare/v1.15.4...1.x)
 
-## [Unreleased](https://github.com/laravel/breeze/compare/v1.9.1...1.x)
-
-> > > > > > > 71f0210 (Update CHANGELOG)
-
-## [v1.9.1](https://github.com/laravel/breeze/compare/v1.9.0...v1.9.1) - 2022-05-11
+## [v1.15.4](https://github.com/laravel/breeze/compare/v1.15.3...v1.15.4) - 2022-12-05
 
 ### Changed
 
-- Update command comments by @taylorotwell in https://github.com/laravel/breeze/commit/cde98d03954bfcad0c9370c825187b8a579d94e1
-
-=======
-
-## [Unreleased](https://github.com/laravel/breeze/compare/v1.13.1...1.x)
-
-=======
-
-## [Unreleased](https://github.com/laravel/breeze/compare/v1.15.2...1.x)
-=======
-## [Unreleased](https://github.com/laravel/breeze/compare/v1.15.3...1.x)
+- Use Default NPM Package Manager of User if Lock File Exists In Base Path by @andrewdwallo in https://github.com/laravel/breeze/pull/224
 
 ## [v1.15.3](https://github.com/laravel/breeze/compare/v1.15.2...v1.15.3) - 2022-11-28
 
@@ -39,6 +26,7 @@
 - Add missing translation methods to Blade stack by @jessarcher in https://github.com/laravel/breeze/pull/215
 
 ## [v1.15.1](https://github.com/laravel/breeze/compare/v1.15.0...v1.15.1) - 2022-11-15
+
 
 ### Fixed
 
