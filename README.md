@@ -1,39 +1,27 @@
-<p align="center"><img src="/art/logo.svg" alt="Logo Laravel Breeze"></p>
-
-<p align="center">
-    <a href="https://packagist.org/packages/laravel/breeze">
-        <img src="https://img.shields.io/packagist/dt/laravel/breeze" alt="Total Downloads">
-    </a>
-    <a href="https://packagist.org/packages/laravel/breeze">
-        <img src="https://img.shields.io/packagist/v/laravel/breeze" alt="Latest Stable Version">
-    </a>
-    <a href="https://packagist.org/packages/laravel/breeze">
-        <img src="https://img.shields.io/packagist/l/laravel/breeze" alt="License">
-    </a>
-</p>
+# drewmw5/breeze
 
 ## Introduction
 
-Breeze provides a minimal and simple starting point for building a Laravel application with authentication. Styled with Tailwind, Breeze publishes authentication controllers and views to your application that can be easily customized based on your own application's needs.
+This package adds the option to install the default Laravel Breeze React scaffolding, but with all necessary types added so you can begin adding/changing the default scaffolding in Typescript!
 
-Laravel Breeze is powered by Blade and Tailwind. If you're looking for a more robust Laravel starter kit that includes two factor authentication, Livewire / Inertia support, and more, check out [Laravel Jetstream](https://jetstream.laravel.com).
+## Installation
 
-## Official Documentation
+### 1. Navigate to your Laravel Project's directory and require the package via composer
 
-Documentation for Breeze can be found on the [Laravel website](https://laravel.com/docs/starter-kits#laravel-breeze).
+```bash
+composer require drewmw5/breeze
+```
 
-## Contributing
+### 2. Execute the following command
 
-Thank you for considering contributing to Breeze! You can read the contribution guide [here](.github/CONTRIBUTING.md).
+```bash
+php artisan breeze:install react-ts
+```
 
-## Code of Conduct
+### 3. Done!
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+(Note: Ensure that `npm i`, `npm run build`, and `php artisan route:cache` have run. I run this from a docker-compose file, so I need to manually execute them. Otherwise, the package should automatically handle these commands.)
 
-## Security Vulnerabilities
+## Notes
 
-Please review [our security policy](https://github.com/laravel/breeze/security/policy) on how to report security vulnerabilities.
-
-## License
-
-Laravel Breeze is open-sourced software licensed under the [MIT license](LICENSE.md).
+If you've found this repo helpful, consider leaving a star! If you'd like to submit a PR, please feel free to do so. Thank you!
