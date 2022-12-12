@@ -24,4 +24,6 @@ php artisan breeze:install react-ts
 
 ## Notes
 
+This package will install Laravel/Breeze alongside itself, so you can still use the default stack install options (e.g. `php artisan breeze:install vue, php artisan breeze:install react`). The package requires Laravel/Breeze but tells composer not to discover it. This allows the package to share the necessary files to install all stack options without the `breeze:install` command being overwritten by Laravel/Breeze. 
+
 If you've found this repo helpful, consider leaving a star! If you'd like to submit a PR, please feel free to do so. Thank you!
