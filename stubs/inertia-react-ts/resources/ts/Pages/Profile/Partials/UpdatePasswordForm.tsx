@@ -60,7 +60,7 @@ export default function UpdatePasswordForm({ className }: Props) {
                         value={data.current_password}
                         handleChange={(e)=> setData('current_password', e.target.value)}
                         type="password"
-                        className="block w-full mt-1"
+                        className="mt-1 block w-full"
                         autoComplete="current-password"
                     />
 
@@ -76,7 +76,7 @@ export default function UpdatePasswordForm({ className }: Props) {
                         value={data.password}
                         handleChange={(e) => setData('password', e.target.value)}
                         type="password"
-                        className="block w-full mt-1"
+                        className="mt-1 block w-full"
                         autoComplete="new-password"
                     />
 
@@ -91,7 +91,7 @@ export default function UpdatePasswordForm({ className }: Props) {
                         value={data.password_confirmation}
                         handleChange={(e) => setData('password_confirmation', e.target.value)}
                         type="password"
-                        className="block w-full mt-1"
+                        className="mt-1 block w-full"
                         autoComplete="new-password"
                     />
 
