@@ -9,7 +9,6 @@ interface Props {
     className?: string;
     autoComplete?: string | undefined;
     required?: boolean;
-    autoFocus?: boolean;
     isFocused?: boolean;
     placeHolder?: string;
     handleChange: React.ChangeEventHandler<HTMLInputElement>;
