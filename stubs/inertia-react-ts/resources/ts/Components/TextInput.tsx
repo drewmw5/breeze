@@ -1,11 +1,10 @@
-import { MutableRefObject, useEffect, useRef } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 
 interface Props {
     type?: string;
     name?: string;
     id: string | undefined;
     value: string;
-    ref?: MutableRefObject<HTMLInputElement>;
     className?: string;
     autoComplete?: string | undefined;
     required?: boolean;
@@ -14,22 +13,23 @@ interface Props {
     handleChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-const TextInput: React.FC<Props> = ({
-    type = 'text',
-    name,
-    id,
-    value,
-    className,
-    autoComplete,
-    required,
-    isFocused,
-    handleChange,
-}: Props) => {
-    const input = useRef<HTMLInputElement>(null);
+export default forwardRef(function TextInput(
+    {
+        type = 'text',
+        name,
+        id,
+        value,
+        className,
+        autoComplete,
+        required,
+        isFocused,
+        handleChange }: Props,
+) {
+    const input = useRef() as React.MutableRefObject<HTMLInputElement>;
 
     useEffect(() => {
         if (isFocused) {
-            input.current?.focus();
+            input.current.focus();
         }
     }, []);
 
@@ -51,6 +51,4 @@ const TextInput: React.FC<Props> = ({
             />
         </div>
     );
-};
-
-export default TextInput;
+});
