@@ -25,7 +25,6 @@ export default forwardRef(function TextInput(
         required,
         isFocused,
         handleChange }: Props,
-    ref
 ) {
     const input = useRef() as React.MutableRefObject<HTMLInputElement>;
 
