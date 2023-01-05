@@ -35,7 +35,7 @@ trait InstallsReactTSStack
                 "@types/react"=> "^18.0.25",
                 "@types/react-dom"=> "^18.0.9",
                 "@types/ziggy-js" => "^1.3.2",
-                '@vitejs/plugin-react' => '^2.0.0',
+                '@vitejs/plugin-react' => '^3.0.0',
                 'autoprefixer' => '^10.4.12',
                 'postcss' => '^8.4.18',
                 'react' => '^18.2.0',

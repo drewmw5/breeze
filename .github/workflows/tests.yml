@@ -12,7 +12,7 @@ on:
 
 jobs:
   stub-tests:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     strategy:
       fail-fast: true
@@ -25,6 +25,7 @@ jobs:
           - stack: react
             args: --ssr
           - stack: react-ts
+            args: --ssr
 
     name: Test Stubs - ${{ matrix.stack }} ${{ matrix.args }}
 
@@ -45,7 +46,7 @@ jobs:
           composer config repositories.breeze '{"type": "path", "url": "breeze"}' --file composer.json
 
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: 'breeze'
 
