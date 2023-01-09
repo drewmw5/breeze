@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This package adds the option to install the default Laravel Breeze React scaffolding, but with all necessary types added so you can begin adding/changing the default scaffolding in Typescript!
+This package adds the option to install the default Laravel Breeze React scaffolding, but with all necessary types added so you can begin adding/changing the default scaffolding in Typescript! You can view a working example of the package [here at https://breeze.drewmw.dev](https://breeze.drewmw.dev)
 
 ## Installation
 
