@@ -51,6 +51,7 @@ jobs:
 
       - name: Install Breeze
         run: |
+          composer install
           php artisan breeze:install ${{ matrix.stack }} ${{ matrix.args }}
       - name: Install NPM dependencies
         if: matrix.stack != 'api'
