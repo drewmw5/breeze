@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        stack: [blade, react, vue, api]
+        stack: [blade, react, react-ts, vue, api]
         laravel: [^9, 10.x-dev]
         args: [null, --pest]
         include:
