@@ -11,26 +11,26 @@ trait InstallsReactTSStack
     /**
      * Install the Inertia Vue Breeze stack.
      *
-     * @return void
+     * @return int|null
      */
 
     protected function installInertiaReactTSStack()
     {
         // Install Inertia...
-        $this->requireComposerPackages(
+        if(! $this->requireComposerPackages(
             'inertiajs/inertia-laravel:^0.6.3',
-            'laravel/sanctum:^2.8',
+            'laravel/sanctum:^3.2',
             'tightenco/ziggy:^1.0',
             'laravel/breeze:^1.14.3'
-        );
+        )) {
+            return 1;
+        };
 
         // NPM Packages...
         $this->updateNodePackages(function ($packages) {
             return [
                 '@headlessui/react' => '^1.4.2',
-                '@inertiajs/inertia' => '^0.11.0',
-                '@inertiajs/inertia-react' => '^0.8.1',
-                '@inertiajs/progress' => '^0.2.6',
+                '@inertiajs/react' => '^1.0.0',
                 '@tailwindcss/forms' => '^0.5.3',
                 "@types/react"=> "^18.0.25",
                 "@types/react-dom"=> "^18.0.9",
