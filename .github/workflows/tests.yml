@@ -18,7 +18,6 @@ jobs:
       fail-fast: true
       matrix:
         stack: [blade, react, react-ts, vue, api]
-        laravel: [^9, 10.x-dev]
         args: [null, --pest]
         include:
           - stack: vue
@@ -28,7 +27,7 @@ jobs:
           - stack: react-ts
             args: --ssr
 
-    name: Test Stubs - Laravel ${{ matrix.laravel }} - ${{ matrix.stack }} ${{ matrix.args }}
+    name: Test Stubs - ${{ matrix.stack }} ${{ matrix.args }}
 
     steps:
       - name: Setup PHP
