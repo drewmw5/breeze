@@ -53,7 +53,7 @@ jobs:
 
       - name: Install Breeze
         run: |
-          composer install "drewmw5/breeze" --prefer-dist --no-interaction --no-progress -W
+          composer update "drewmw5/breeze" --prefer-dist --no-interaction --no-progress -W
           php artisan breeze:install ${{ matrix.stack }} ${{ matrix.args }}
 
       - name: Install NPM dependencies
