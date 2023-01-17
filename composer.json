@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "laravel/breeze": "^1.14.3",
+        "laravel/breeze": "^1.18.0",
         "php": "^8.0.2",
         "illuminate/console": "^9.21|^10.0",
         "illuminate/filesystem": "^9.21|^10.0",
