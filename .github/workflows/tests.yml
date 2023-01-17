@@ -42,7 +42,7 @@ jobs:
       - name: Setup Laravel
         run: |
           composer create-project laravel/laravel:${{ matrix.laravel }} .
-          composer require drewmw5/breeze:* --no-interaction --no-update
+          composer require drewmw5/breeze:2.x-dev --no-interaction --no-update
           composer config repositories.breeze '{"type": "path", "url": "breeze"}' --file composer.json
       - name: Checkout code
         uses: actions/checkout@v3
