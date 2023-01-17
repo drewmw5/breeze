@@ -51,7 +51,7 @@ jobs:
 
       - name: Install Breeze
         run: |
-          composer update drewwm5/breeze -W
+          composer update drewmw5/breeze -W
           php artisan breeze:install ${{ matrix.stack }} ${{ matrix.args }}
       - name: Install NPM dependencies
         if: matrix.stack != 'api'
