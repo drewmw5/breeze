@@ -2,8 +2,8 @@ import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
-import { Link, useForm, usePage } from '@inertiajs/inertia-react';
-import type { Page, PageProps, Errors, ErrorBag } from '@inertiajs/inertia';
+import { Link, useForm, usePage } from '@inertiajs/react';
+import type { Page, PageProps, Errors, ErrorBag } from '@inertiajs/react';
 import { Transition } from '@headlessui/react';
 
 interface Props {

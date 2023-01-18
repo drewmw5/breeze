@@ -5,7 +5,6 @@ on:
     branches:
       - master
       - '*.x'
-      - merge
   pull_request:
   schedule:
     - cron: '0 0 * * *'
@@ -27,7 +26,7 @@ jobs:
           - stack: react-ts
             args: --ssr
 
-    name: Test Stubs - ${{ matrix.stack }} ${{ matrix.args }}
+    name: Test Stubs - Laravel ${{ matrix.laravel }} - ${{ matrix.stack }} ${{ matrix.args }}
 
     steps:
       - name: Setup PHP
@@ -41,10 +40,9 @@ jobs:
 
       - name: Setup Laravel
         run: |
-          composer create-project laravel/laravel:^9 .
+          composer create-project laravel/laravel:10.x-dev .
           composer require drewmw5/breeze:* --no-interaction --no-update
           composer config repositories.breeze '{"type": "path", "url": "breeze"}' --file composer.json
-
       - name: Checkout code
         uses: actions/checkout@v3
         with:
@@ -54,7 +52,6 @@ jobs:
         run: |
           composer update "drewmw5/breeze" --prefer-dist --no-interaction --no-progress -W
           php artisan breeze:install ${{ matrix.stack }} ${{ matrix.args }}
-
       - name: Install NPM dependencies
         if: matrix.stack != 'api'
         run: npm i
