@@ -2,7 +2,11 @@ import GuestLayout from '@/Layouts/GuestLayout';
 import PrimaryButton from '@/Components/PrimaryButton';
 import { Head, Link, useForm } from '@inertiajs/react';
 
-export default function VerifyEmail({ status }) {
+interface Props {
+    status: string;
+}
+
+export default function VerifyEmail({ status }: Props) {
     const { post, processing } = useForm({});
 
     const submit = (e: React.FormEvent) => {
