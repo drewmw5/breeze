@@ -44,7 +44,7 @@ class InstallReactTSCommand extends Command
      *
      * @var array<int, string>
      */
-    protected $stacks = ['blade', 'react', 'vue', 'api'];
+    protected $stacks = ['blade', 'react', 'react-ts', 'vue', 'api'];
 
     /**
      * Execute the console command.
