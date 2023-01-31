@@ -21,8 +21,7 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'breeze:install {stack : The development stack that should be installed (blade,react,vue,api)}
-                            {--dark : Indicate that dark mode support should be installed}
+    protected $signature = 'breeze:install {stack=blade : The development stack that should be installed (blade,react,react-ts,vue,api)}
                             {--inertia : Indicate that the Vue Inertia stack should be installed (Deprecated)}
                             {--pest : Indicate that Pest should be installed}
                             {--ssr : Indicates if Inertia SSR support should be installed}
@@ -53,6 +52,8 @@ class InstallCommand extends Command
             return $this->installInertiaVueStack();
         } elseif ($this->argument('stack') === 'react') {
             return $this->installInertiaReactStack();
+        } else if ($this->argument('stack') === 'react-ts') {
+            return $this->installInertiaReactTSStack();
         } elseif ($this->argument('stack') === 'api') {
             return $this->installApiStack();
         } elseif ($this->argument('stack') === 'blade') {
