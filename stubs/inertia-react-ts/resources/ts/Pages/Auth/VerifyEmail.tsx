@@ -5,7 +5,6 @@ import { Head, Link, useForm } from '@inertiajs/react';
 interface Props {
     status: string;
 }
-
 export default function VerifyEmail({ status }: Props) {
     const { post, processing } = useForm({});
 
