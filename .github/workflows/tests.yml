@@ -17,6 +17,7 @@ jobs:
       fail-fast: true
       matrix:
         stack: [blade, react, react-ts, vue, api]
+        laravel: [^9, 10.x-dev]
         args: [null, --pest]
         include:
           - stack: vue
@@ -40,8 +41,8 @@ jobs:
 
       - name: Setup Laravel
         run: |
-          composer create-project laravel/laravel:10.x-dev .
-          composer require drewmw5/breeze:* --no-interaction --no-update
+          composer create-project laravel/laravel:${{ matrix.laravel }} .
+          composer require drewmw5/breeze:@dev --no-interaction --no-update
           composer config repositories.breeze '{"type": "path", "url": "breeze"}' --file composer.json
       - name: Checkout code
         uses: actions/checkout@v3

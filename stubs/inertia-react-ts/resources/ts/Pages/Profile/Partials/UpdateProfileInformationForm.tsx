@@ -75,11 +75,15 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                         value={data.email}
                         handleChange={(e) => setData('email', e.target.value)}
                         required
-                        autoComplete="email"
+                        autoComplete="username"
                     />
 
                     <InputError className="mt-2" message={errors.email} />
-                </div>
+                <
+export default function VerifyEmail({ status }: Props) {
+    const { post, processing } = useForm({});
+
+/div>
 
                 {mustVerifyEmail && user.email_verified_at === null && (
                     <div>
