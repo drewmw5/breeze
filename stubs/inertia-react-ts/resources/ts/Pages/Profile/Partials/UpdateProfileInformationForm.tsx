@@ -79,11 +79,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                     />
 
                     <InputError className="mt-2" message={errors.email} />
-                <
-export default function VerifyEmail({ status }: Props) {
-    const { post, processing } = useForm({});
-
-/div>
+                </div>
 
                 {mustVerifyEmail && user.email_verified_at === null && (
                     <div>
