@@ -2,32 +2,18 @@ import React, { forwardRef, useEffect, useRef } from 'react';
 
 interface Props {
     type?: string;
-    name?: string;
-    id: string | undefined;
-    value: string;
     className?: string;
-    autoComplete?: string | undefined;
-    required?: boolean;
     isFocused?: boolean;
-    placeHolder?: string;
     handleChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 export default forwardRef(function TextInput(
     {
         type = 'text',
-        name,
-        id,
-        value,
         className,
-        autoComplete,
-        required,
         isFocused,
-        placeHolder,
-        handleChange }: Props,
+        ...props }: Props, ref
 ) {
-    const input = useRef() as React.MutableRefObject<HTMLInputElement>;
-export default forwardRef(function TextInput({ type = 'text', className = '', isFocused = false, ...props }, ref) {
     const input = ref ? ref : useRef();
 
     useEffect(() => {
