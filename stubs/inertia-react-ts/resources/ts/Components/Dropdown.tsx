@@ -92,14 +92,10 @@ const Content: React.FC<ContentProps> = ({ align = 'right', width = '48', conten
 };
 
 type LinkProps = {
-    href?: string;
-    method?: string;
-    as?: string;
     children?: React.ReactNode;
     className?: string;
 }
 
-const DropdownLink: React.FC<LinkProps> = ({ href = '', method = 'post', as = 'a', children }: LinkProps) => {
 const DropdownLink = ({ className = '', children, ...props }: LinkProps) => {
     return (
         <Link
