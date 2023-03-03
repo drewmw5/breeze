@@ -1,8 +1,11 @@
 import { Link } from '@inertiajs/react';
+import type { Method } from '@inertiajs/core/types/types';
 
 interface Props {
+    method?: Method;
+    as?: string;
+    href?: string;
     active?: boolean;
-    className?: string;
     children?: React.ReactNode;
 }
 

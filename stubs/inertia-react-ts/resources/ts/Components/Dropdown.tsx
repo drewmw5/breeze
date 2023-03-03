@@ -1,6 +1,7 @@
 import { useState, createContext, useContext, Fragment } from 'react';
 import { Link } from '@inertiajs/react';
 import { Transition } from '@headlessui/react';
+import type { Method } from '@inertiajs/core/types/types';
 
 interface Context {
     open: boolean,
@@ -92,8 +93,10 @@ const Content: React.FC<ContentProps> = ({ align = 'right', width = '48', conten
 };
 
 type LinkProps = {
+    href?: string;
+    method?: Method;
+    as?: string;
     children?: React.ReactNode;
-    className?: string;
 }
 
 const DropdownLink = ({ className = '', children, ...props }: LinkProps) => {

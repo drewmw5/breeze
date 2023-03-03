@@ -86,7 +86,7 @@ export default function DeleteUserForm({ className }: Props) {
                             placeHolder="Password"
                         />
 
-                        <InputError message={errors.password} className="mt-2" />
+                        <InputError message={errors.password as string} className="mt-2" />
                     </div>
 
                     <div className="mt-6 flex justify-end">

@@ -3,7 +3,7 @@ import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { Link, useForm, usePage } from '@inertiajs/react';
-import type { Page, PageProps, Errors, ErrorBag } from '@inertiajs/react';
+import type { Page, PageProps, Errors, ErrorBag } from '@inertiajs/core';
 import { Transition } from '@headlessui/react';
 
 interface Props {
@@ -62,7 +62,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                         autoComplete="name"
                     />
 
-                    <InputError className="mt-2" message={errors.name} />
+                    <InputError className="mt-2" message={errors.name as string} />
                 </div>
 
                 <div>
@@ -78,7 +78,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                         autoComplete="username"
                     />
 
-                    <InputError className="mt-2" message={errors.email} />
+                    <InputError className="mt-2" message={errors.email as string} />
                 </div>
 
                 {mustVerifyEmail && user.email_verified_at === null && (
