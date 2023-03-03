@@ -49,7 +49,7 @@ export default function ConfirmPassword() {
                         handleChange={onHandleChange}
                     />
 
-                    <InputError message={errors.password} className="mt-2" />
+                    <InputError message={errors.password as string} className="mt-2" />
                 </div>
 
                 <div className="flex items-center justify-end mt-4">

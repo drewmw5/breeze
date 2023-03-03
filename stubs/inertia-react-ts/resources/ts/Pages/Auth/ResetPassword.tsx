@@ -53,7 +53,7 @@ export default function ResetPassword({ token, email }: Props) {
                         handleChange={onHandleChange}
                     />
 
-                    <InputError message={errors.email} className="mt-2" />
+                    <InputError message={errors.email as string} className="mt-2" />
                 </div>
 
                 <div className="mt-4">
@@ -70,7 +70,7 @@ export default function ResetPassword({ token, email }: Props) {
                         handleChange={onHandleChange}
                     />
 
-                    <InputError message={errors.password} className="mt-2" />
+                    <InputError message={errors.password as string} className="mt-2" />
                 </div>
 
                 <div className="mt-4">
@@ -86,7 +86,7 @@ export default function ResetPassword({ token, email }: Props) {
                         handleChange={onHandleChange}
                     />
 
-                    <InputError message={errors.password_confirmation} className="mt-2" />
+                    <InputError message={errors.password_confirmation as string} className="mt-2" />
                 </div>
 
                 <div className="flex items-center justify-end mt-4">

@@ -56,7 +56,7 @@ export default function Login({ status, canResetPassword }: Props) {
                         handleChange={onHandleChange}
                     />
 
-                    <InputError message={errors.email} className="mt-2" />
+                    <InputError message={errors.email as string} className="mt-2" />
                 </div>
 
                 <div className="mt-4">
@@ -72,7 +72,7 @@ export default function Login({ status, canResetPassword }: Props) {
                         handleChange={onHandleChange}
                     />
 
-                    <InputError message={errors.password} className="mt-2" />
+                    <InputError message={errors.password as string} className="mt-2" />
                 </div>
 
                 <div className="block mt-4">

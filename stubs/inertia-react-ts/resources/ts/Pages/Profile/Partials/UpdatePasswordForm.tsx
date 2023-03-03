@@ -64,7 +64,7 @@ export default function UpdatePasswordForm({ className }: Props) {
                         autoComplete="current-password"
                     />
 
-                    <InputError message={errors.current_password} className="mt-2" />
+                    <InputError message={errors.current_password as string} className="mt-2" />
                 </div>
 
                 <div>
@@ -80,7 +80,7 @@ export default function UpdatePasswordForm({ className }: Props) {
                         autoComplete="new-password"
                     />
 
-                    <InputError message={errors.password} className="mt-2" />
+                    <InputError message={errors.password as string} className="mt-2" />
                 </div>
 
                 <div>
@@ -95,7 +95,7 @@ export default function UpdatePasswordForm({ className }: Props) {
                         autoComplete="new-password"
                     />
 
-                    <InputError message={errors.password_confirmation} className="mt-2" />
+                    <InputError message={errors.password_confirmation as string} className="mt-2" />
                 </div>
 
                 <div className="flex items-center gap-4">

@@ -45,7 +45,7 @@ export default function ForgotPassword({ status }: Props) {
                     handleChange={onHandleChange}
                 />
 
-                <InputError message={errors.email} className="mt-2" />
+                <InputError message={errors.email as string} className="mt-2" />
 
                 <div className="flex items-center justify-end mt-4">
                     <PrimaryButton className="ml-4" processing={processing}>
