@@ -17,7 +17,7 @@ export default function ConfirmPassword() {
         };
     }, []);
 
-    const onHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setData(event.target.name as "password", event.target.value);
     };
 
@@ -37,23 +37,23 @@ export default function ConfirmPassword() {
 
             <form onSubmit={submit}>
                 <div className="mt-4">
-                    <InputLabel forInput="password" value="Password" />
+                    <InputLabel htmlFor="password" value="Password" />
 
                     <TextInput
                         id="password"
                         type="password"
                         name="password"
                         value={data.password}
-                        className="block w-full mt-1"
-                        isFocused
-                        handleChange={onHandleChange}
+                        className="mt-1 block w-full"
+                        isFocused={true}
+                        onChange={handleOnChange}
                     />
 
                     <InputError message={errors.password as string} className="mt-2" />
                 </div>
 
                 <div className="flex items-center justify-end mt-4">
-                    <PrimaryButton className="ml-4" processing={processing} >
+                    <PrimaryButton className="ml-4" disabled={processing}>
                         Confirm
                     </PrimaryButton>
                 </div>

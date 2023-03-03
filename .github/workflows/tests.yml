@@ -17,15 +17,18 @@ jobs:
       fail-fast: true
       matrix:
         stack: [blade, react, react-ts, vue, api]
-        laravel: [^9, 10.x-dev]
-        args: [null, --pest]
+        laravel: [9, 10]
+        args: ["", --pest]
         include:
           - stack: vue
             args: --ssr
+            laravel: 10
           - stack: react
             args: --ssr
+            laravel: 10
           - stack: react-ts
             args: --ssr
+            laravel: 10
 
     name: Test Stubs - Laravel ${{ matrix.laravel }} - ${{ matrix.stack }} ${{ matrix.args }}
 
@@ -41,7 +44,7 @@ jobs:
 
       - name: Setup Laravel
         run: |
-          composer create-project laravel/laravel:${{ matrix.laravel }} .
+          composer create-project laravel/laravel:^${{ matrix.laravel }} .
           composer require drewmw5/breeze:@dev --no-interaction --no-update
           composer config repositories.breeze '{"type": "path", "url": "breeze"}' --file composer.json
       - name: Checkout code
@@ -62,7 +65,7 @@ jobs:
         run: npm run build
 
       - name: Execute tests
-        run: ${{ matrix.args == '--pest' && 'vendor/bin/pest' || 'vendor/bin/phpunit' }} --verbose
+        run: ${{ matrix.args == '--pest' && 'vendor/bin/pest' || 'vendor/bin/phpunit' }}
         env:
           DB_CONNECTION: sqlite
           DB_DATABASE: ":memory:"

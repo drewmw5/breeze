@@ -25,7 +25,7 @@ export default function Login({ status, canResetPassword }: Props) {
         };
     }, []);
 
-    const onHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setData(event.target.name  as  "email" | "password" | "remember", event.target.type === 'checkbox' ? event.target.checked + '' : event.target.value);
     };
 
@@ -43,7 +43,7 @@ export default function Login({ status, canResetPassword }: Props) {
 
             <form onSubmit={submit}>
                 <div>
-                    <InputLabel forInput="email" value="Email" />
+                    <InputLabel htmlFor="email" value="Email" />
 
                     <TextInput
                         id="email"
@@ -53,14 +53,14 @@ export default function Login({ status, canResetPassword }: Props) {
                         className="mt-1 block w-full"
                         autoComplete="username"
                         isFocused={true}
-                        handleChange={onHandleChange}
+                        onChange={handleOnChange}
                     />
 
                     <InputError message={errors.email as string} className="mt-2" />
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel forInput="password" value="Password" />
+                    <InputLabel htmlFor="password" value="Password" />
 
                     <TextInput
                         id="password"
@@ -69,7 +69,7 @@ export default function Login({ status, canResetPassword }: Props) {
                         value={data.password}
                         className="mt-1 block w-full"
                         autoComplete="current-password"
-                        handleChange={onHandleChange}
+                        onChange={handleOnChange}
                     />
 
                     <InputError message={errors.password as string} className="mt-2" />
@@ -77,7 +77,7 @@ export default function Login({ status, canResetPassword }: Props) {
 
                 <div className="block mt-4">
                     <label className="flex items-center">
-                        <Checkbox name="remember" value={data.remember} handleChange={onHandleChange} />
+                        <Checkbox name="remember" value={data.remember} onChange={handleOnChange} />
                         <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">Remember me</span>
                     </label>
                 </div>
@@ -92,7 +92,7 @@ export default function Login({ status, canResetPassword }: Props) {
                         </Link>
                     )}
 
-                    <PrimaryButton className="ml-4" processing={processing}>
+                    <PrimaryButton className="ml-4" disabled={processing}>
                         Log in
                     </PrimaryButton>
                 </div>
