@@ -7,7 +7,7 @@ interface Props {
     onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
-// export default function DangerButton({ type = 'submit', className = '', processing, children, onClick }: Props) {
+
 export default function DangerButton({ className = '', disabled, children, ...props }: Props) {
     return (
         <button

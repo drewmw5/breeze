@@ -25,7 +25,7 @@ interface InertiaPage extends Page<PageProps> {
 }
 
 export default function UpdateProfileInformation({ mustVerifyEmail, status, className, }: Props) {
-    const user = usePage<InertiaPage>().props.auth.user;
+    const user = usePage<InertiaPage & { [key: string]: any }>().props.auth.user;
 
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
         name: user.name,
